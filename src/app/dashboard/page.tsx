@@ -3,8 +3,6 @@ import DashboardSkeleton from "@/components/loaders/dashboard-skeleton"
 import Languages from "@/components/pages/dashboard/languages"
 import CodeTime from "@/components/pages/dashboard/code-time"
 import HeadingText from "@/components/common/heading-text"
-import Image from "next/image"
-import wakatime from "./../../../public/wakatime.svg"
 import Link from "next/link"
 import { Languages as LanguagesType } from "@/types"
 import { getCodingStats } from "@/lib/api/wakatime"
@@ -24,13 +22,13 @@ interface ResponseData {
   }
 }
 
-interface LanguagesProps {
-  languages: Languages[]
-}
+// interface LanguagesProps {
+//   languages: Languages[]
+// }
 
 export default async function Dashboard() {
   const data = (await getCodingStats()) as ResponseData
-  const totalTime = data.data.human_readable_total_including_other_language
+  // const totalTime = data.data.human_readable_total_including_other_language
   const languages: LanguagesType[] = data.data.languages
 
   return (
