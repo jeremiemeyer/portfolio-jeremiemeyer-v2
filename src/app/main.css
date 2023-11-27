@@ -1,0 +1,299 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40vh 0 0 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 100vh;
+}
+
+.research {
+  margin: 2rem 0;
+  border-radius: 3vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+
+.line {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
+  width: 1px;
+
+}
+
+.mainDiv::before,
+.mainDiv::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.mainDiv::before {
+  background: var(--third-glow);
+  border-radius: 50%;
+  width: 50vw;
+  height: 50vw;
+  margin-left: -200px;
+  filter: blur(90px);
+  top: calc(50vh - 50vw/2);
+  left: calc(50vw);
+  animation: animateBefore 7s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+}
+
+.mainDiv::after {
+  background: var(--secondary-glow);
+  border-radius: 50%;
+  width: 500px;
+  height: 700px;
+  filter: blur(90px);
+  top: calc(50vh - 50vw/2);
+  left: calc(50vw - 50vw/2);
+  animation: animateAfter 7s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+}
+
+@keyframes animateBefore {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(200px) scale(0.8);
+
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes animateAfter {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-250px) scale(1.2);
+
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.bg-blur {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #555;
+}
+
+
+
+/* Le swiper du haut */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-container .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #3b82f6;
+}
+
+.swiper-zoom-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+@media screen and (min-width: 300px) {
+  .swiper-container {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .swiper-container {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .swiper-container {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-container {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .swiper-container {
+    width: 800px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .swiper-container {
+    width: 1000px;
+  }
+}
+
+
+/* Box hover effect  */
+.boxhovereffect {
+  z-index: 500;
+  --c: rgba(37, 99, 235, 0.8);
+  --b: 4px;
+  --g: 20px;
+  padding: calc(var(--g) + var(--b));
+  --_g: #0000 25%, var(--c) 0;
+  background: conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat, conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0 var(--_i, 200%)/var(--_i, var(--b)) 200% no-repeat;
+  transition: .3s, background-position .3s .3s;
+  cursor: pointer;
+}
+
+.boxhovereffect:hover {
+  z-index: 500;
+  --_i: 100%;
+  transition: .3s, background-size .3s .3s;
+}
+
+
+/* Grid background */
+/* Source : https://codepen.io/iqszlong/pen/RYxYmw */
+.grid-bg {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ba-grid {
+  position: relative;
+  z-index: 1;
+  background-image:
+    /* radial-gradient(ellipse at center, #144663 0%, #03203f 100%), */
+    radial-gradient(ellipse at center, #d4eefd 0%, #84c2e6 100%),
+    /* radial-gradient(ellipse at bottom left, rgba(104,128,138,0.4) 10%, rgba(138,114,76,0) 40%), */
+    linear-gradient(to bottom, rgba(57, 173, 219, .25), rgba(42, 60, 87, 0.4)),
+    linear-gradient(135deg, #670d10, #092756);
+}
+
+.dark .ba-grid {
+  background-image:
+    radial-gradient(ellipse at center, #144663 0%, #03203f 100%),
+    linear-gradient(to bottom, rgba(57, 173, 219, .25), rgba(42, 60, 87, 0.4)),
+    linear-gradient(135deg, #670d10, #092756);
+}
+
+.ba-grid:before,
+.ba-grid:after,
+.inner:before,
+.inner:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  mix-blend-mode: overlay;
+}
+
+.ba-grid:before {
+  background-image:
+    linear-gradient(var(--line-color), transparent 1px),
+    linear-gradient(to right, var(--line-color), transparent 1px);
+  background-size:
+    100% var(--gird-height),
+    var(--gird-width) 100%;
+}
+
+
+.ba-grid:after {
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: var(--point-gap-width) var(--point-gap-height);
+  background-position: calc(var(--point-gap-width) / 2) calc(var(--point-gap-height) / 2);
+  z-index: 1;
+}
+
+.inner:before,
+.inner:after {
+  background-image: radial-gradient(var(--dot-color) var(--dot-size), transparent var(--dot-size));
+  background-size: var(--point-gap-width) var(--point-gap-height);
+  background-position: calc(var(--point-gap-width) / 2) calc(var(--point-gap-height) / 2);
+  z-index: 1;
+}
+
+.inner:after {
+  transform: scale(1.1, 1.1);
+}
+
+.inner:before {
+  /* background-image: radial-gradient(var(--dot-color) calc(var(--dot-size) + 1px), transparent calc(var(--dot-size) + 1px)); */
+  transform: scale(1.2, 1.2);
+}
+
+.anim:after {
+  animation: 6.4s linear move infinite;
+}
+
+.anim .inner:after {
+  animation: 3.2s linear move infinite;
+}
+
+.anim .inner:before {
+  animation: 1.6s linear move infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: calc(var(--point-gap-width) / 2) calc(var(--point-gap-height) / 2);
+  }
+
+  100% {
+    background-position: calc(var(--point-gap-width) / 2) calc(var(--point-gap-height) / 2 * -1);
+  }
+}
