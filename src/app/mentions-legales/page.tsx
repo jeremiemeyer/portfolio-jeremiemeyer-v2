@@ -8,7 +8,7 @@ export const metadata = {
 export default function Contact() {
   return (
     <main className="fade-in container py-4 sm:py-8 flex flex-col items-center">
-      <div className="flex flex-col items-center text-center space-y-2npm i">
+      <div className="flex flex-col items-center text-center space-y-2 pb-8">
         <HeadingText title="Mentions légales" />
       </div>
       <ul>

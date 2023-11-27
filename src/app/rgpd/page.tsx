@@ -9,19 +9,13 @@ export const metadata = {
 export default function Contact() {
   return (
     <main className="text-black dark:text-zinc-300 fade-in container py-4 sm:py-8 flex flex-col items-center">
-      <div className="flex flex-col items-center text-center space-y-2npm i">
+      <div className="flex flex-col items-center text-center space-y-2 pb-12">
         <HeadingText
           title="RGPD"
           subtext="Déclaration relatives aux données personnelles"
         />
       </div>
       <div className="max-w-4xl">
-        <p className="mb-8">
-          Cette déclaration est relative aux données personnelles recueillies
-          par le présent site.
-          <br />
-        </p>
-
         <H2>Collecte de données personnelles</H2>
         <p className="mb-8">
           Lorsque vous visitez ce site web, nous pouvons collecter certaines
