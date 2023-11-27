@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-gray-200 dark:border-gray-800 mt-auto">
-      <div className="w-full max-w-screen-xl mx-auto p-6 md:py-8">
+      <div className="w-full container max-w-[1200px] mx-auto p-6 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link href="/">
             <h1 className="text-2xl font-bold mb-2 sm:mb-0">JM</h1>
