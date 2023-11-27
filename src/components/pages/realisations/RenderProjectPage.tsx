@@ -1,17 +1,16 @@
+//@ts-nocheck
 "use client"
 import Conditional from "@/components/Conditional"
+import Link from "next/link"
 import { H1, H2, H3 } from "@/components/Form"
 import DeploymentList from "@/components/list/DeploymentList"
 import StackList from "@/components/list/StackList"
-// import { PageSEO } from "@/components/SEO"
+import { PageSEO } from "@/components/SEO"
 import config from "../../../config"
 import type { Project, SubProject } from "@/config/projects"
 import { defaultDimensions } from "@/config/projects"
-import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import Image from "next/image"
-import React, { useCallback, useRef, useState } from "react"
-import ScrollContainer from "react-indiana-drag-scroll"
-import Link from "next/link"
+import React, { useCallback } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/zoom"
@@ -27,9 +26,13 @@ export default function RenderProjectPage({
 }: {
   params: { slug: string }
 }) {
-  const project: Project = projects.find(
+  const project: Project | undefined = projects.find(
     (project: Project) => project.slug === params?.slug
-  )!
+  )
+  if (!project) {
+    return <div>Project not found</div>;
+  }
+
   const {
     title,
     description,
@@ -88,22 +91,22 @@ export default function RenderProjectPage({
         <div className="grid-bg ba-grid anim">
           <div className="mx-auto flex-row justify-center inner">
             {" "}
-            {/* <PageSEO
+            <PageSEO
               title={title}
-              description={shortDescription || description}
+              description={shortDescription}
               imageUrl={banner}
-            /> */}
+            />
             <div className="relative flex justify-center py-2">
               <div className="flex flex-col z-50 container">
                 <H1 className="mb-4 text-3xl font-bold lg:text-5x dark:text-white">
-                  {/* <span className="text-xl font-light text-zinc-400">
-                    <Link href="/realisations" className="hover:underline ">
-                      Réalisations /
+                  <span className="text-xl font-light text-zinc-300">
+                    <Link href="/realisations" className="hover:underline text-xs text-zinc-500">
+                      {`< voir tous les projets`}
                     </Link>
                   </span>
-                  <br /> */}
+                  <br />
                   <span
-                    className={`${unbounded.className} text-zinc-600 dark:text-zinc-500 uppercase text-base font-normal `}
+                    className={`${unbounded.className} text-zinc-600 dark:text-zinc-400 uppercase text-base font-normal `}
                   >
                     {projectType}
                   </span>
@@ -135,7 +138,7 @@ export default function RenderProjectPage({
           </div>
         </div>
 
-        <div className="pt-12 mx-auto container">
+        <div className="mt-8 mx-auto container">
           <H2>Description</H2>
           <div className="font-light mb-12 max-w-3xl">{description}</div>
 

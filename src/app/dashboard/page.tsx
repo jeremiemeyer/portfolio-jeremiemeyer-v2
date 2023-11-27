@@ -12,6 +12,7 @@ import { siteConfig } from "@/../config/site"
 
 export const metadata = {
   title: "Dashboard | Jeremie Meyer",
+  description: "Statistiques sur mon travail",
 }
 
 interface ResponseData {

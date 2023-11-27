@@ -134,8 +134,25 @@ export const projects: Project[] = [
     slug: 'portfolio-jm',
     banner: '/static/projects/portfolio-jm/mockup.jpg',
     website: 'https://www.jeremiemeyer.fr',
-    description:
-      "Création de mon portfolio personnel en Next.js, avec un back-end Node.js/Express.js.",
+    description: React.createElement('div', null,
+    React.createElement('p', null, 'Mon portfolio personnel, réalisé avec Next.js.'),
+    React.createElement('br', null),
+    React.createElement('br', null),
+    React.createElement(H2,  { style : { fontSize: '20px', fontWeight: '600', marginBottom: '12px'} }, 'Bibliothèques utilisées'),
+    React.createElement('ul', { style: { fontSize: '16px' } },
+    React.createElement('li', { style: { listStyleType: 'circle', marginLeft: '20px', marginBottom: '2px' } },
+      React.createElement('a', { href: 'https://ui.shadcn.com/', target: '_blank' }, 'shadcn/ui')
+    ),
+    React.createElement('li', { style: { listStyleType: 'circle', marginLeft: '20px', marginBottom: '2px' } },
+      React.createElement('a', { href: 'https://recharts.org/en-US/', target: '_blank' }, 'recharts (graphiques)')
+    ),
+    React.createElement('li', { style: { listStyleType: 'circle', marginLeft: '20px', marginBottom: '2px' } },
+      React.createElement('a', { href: 'https://nodemailer.com/', target: '_blank' }, 'nodemailer (envoi de mails avec le formulaire)')
+    ),
+    React.createElement('li', { style: { listStyleType: 'circle', marginLeft: '20px', marginBottom: '2px' } },
+    React.createElement('a', { href: 'https://zod.dev/', target: '_blank' }, 'zod (bibliothèque de validation de schémas TypeScript)')
+  ),
+    )),
     shortDescription:
       'Mon portfolio personnel.',
     repository: '',
@@ -164,8 +181,17 @@ export const projects: Project[] = [
     React.createElement('br', null),
     React.createElement('ul', { style: { listStyleType: 'circle', marginLeft: '20px' } },
       React.createElement('li', null, `Front-end JavaScript natif ;`),
-      React.createElement('li', null, 'Back-end Node.js/Express.js minimaliste (gestion formulaire de contact, envoi de mails avec nodemailer)'),
-    ),),
+      React.createElement('li', null, 'Styles CSS sur mesure ;'),
+      React.createElement('li', null, 'Back-end Node.js/Express.js minimaliste (formulaire de contact, envoi de mails) ;'),
+      React.createElement('li', null, 'Mise en production, hébergement chez O2switch ;'),
+      React.createElement('br', null)),
+    React.createElement('br', null),
+    React.createElement(H2,  { style : { fontSize: '20px', fontWeight: '600', marginBottom: '12px'} }, 'Bibliothèques utilisées'),
+    React.createElement('ul', { style: { fontSize: '16px' } },
+    React.createElement('li', { style: { listStyleType: 'circle', marginLeft: '20px', marginBottom: '2px' } },
+      React.createElement('a', { href: 'https://nodemailer.com/', target: '_blank' }, 'nodemailer (envoi de mails avec le formulaire)')
+    ),)
+    ),
     shortDescription:
       'Site web vitrine sur mesure pour une entreprise de dénaturation de bouteilles de gaz.',
     repository: '',

@@ -3,6 +3,7 @@ import Link from "next/link"
 
 export const metadata = {
   title: "Mentions légales | Jeremie Meyer",
+  description: "Mentions légales",
 }
 
 export default function Contact() {

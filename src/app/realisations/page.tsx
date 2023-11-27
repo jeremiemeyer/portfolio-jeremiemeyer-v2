@@ -11,6 +11,7 @@ import ProjectCard from "@/components/pages/home/project-card"
 
 export const metadata = {
   title: "Réalisations | Jeremie Meyer",
+  description: "Projets réalisés",
 }
 
 export default function Projects() {

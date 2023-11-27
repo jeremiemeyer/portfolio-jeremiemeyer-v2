@@ -4,6 +4,7 @@ import HeadingText from "@/components/common/heading-text"
 
 export const metadata = {
   title: "Contact | Jeremie Meyer",
+  description: "Page de contact",
 }
 
 export default function Contact() {

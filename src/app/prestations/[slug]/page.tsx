@@ -17,10 +17,6 @@ import RenderPrestationPage from "@/components/pages/prestations/RenderPrestatio
 const { prestations } = config
 
 
-export const metadata = {
-  title: `Réalisations | Jeremie Meyer`,
-}
-
 export default function page({ params }: { params: { slug: string } }) {
   return (
     <RenderPrestationPage params={params } />
