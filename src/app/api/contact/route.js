@@ -7,7 +7,6 @@ export const POST = async (req, res) => {
         await sendMail(
             data.senderName,
             data.email,
-            data.subject,
             data.message
         );
         return new Response("Email sent.", { status: 200 })

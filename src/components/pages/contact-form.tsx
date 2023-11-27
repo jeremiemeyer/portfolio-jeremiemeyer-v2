@@ -78,6 +78,7 @@ export default function ContactForm() {
 
   return (
     <>
+    <div className="flex flex-col">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -158,10 +159,11 @@ export default function ContactForm() {
       </Form>
 
       {submitted && (
-        <h1 className="fade-in green_gradient font-semibold">
+        <h1 className="fade-in green_gradient font-semibold mt-8 text-center">
           Message envoyé !
         </h1>
       )}
+      </div>
     </>
   )
 }

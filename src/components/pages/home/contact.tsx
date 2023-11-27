@@ -7,7 +7,7 @@ export default function Contact() {
       <div className="flex flex-col lg:flex-col-reverse gap-6">
         <div className="space-y-4">
           <div className="flex flex-col lg:flex-row gap-6 align-top justify-between">
-            <div className="md:w-1/3">
+            <div className="md:w-1/2">
               <HeadingText title="Contactez-moi" />
               <p className="pt-6 lg:text-lg text-zinc-500 dark:text-zinc-400">
                 Besoin d'aide pour un projet ? Vous souhaitez que l'on travaille ensemble ? Contactez-moi à
@@ -18,6 +18,7 @@ export default function Contact() {
               </p>
             </div>
             <ContactForm />
+
           </div>
         </div>
       </div>
