@@ -53,10 +53,11 @@ export default async function Dashboard() {
             </Link>
           </p>
 
-          <section className="py-16 px-8 md:px-0  space-y-4 text-left">
-          <HeadingText
-            title="GitHub Repo"
-          />
+          <section className="py-16 space-y-4 text-left">
+            <div className="px-6">
+              <HeadingText title="GitHub Repo" />
+            </div>
+
             <div className="flex flex-col items-end gap-4">
               <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 <Suspense fallback={<ProjectsSkeleton />}>
@@ -72,7 +73,6 @@ export default async function Dashboard() {
               </a>
             </div>
           </section>
-          
         </div>
       </div>
     </main>
