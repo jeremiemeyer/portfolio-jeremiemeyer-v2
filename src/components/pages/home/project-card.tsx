@@ -29,7 +29,7 @@ export default function ProjectCard({
     >
       <div className="boxhovereffect border border-gray-400 border-opacity-20 dark:border-slate-700 dark:border-opacity-30 rounded-3xl">
         <Link href={href}>
-          <div className="flex-col ml-0 w-1/2">
+          <div className="flex-col ml-0 p-2 md:p-0 md:w-1/2">
             <p className={`${unbounded.className} uppercase text-xs text-zinc-300`}>{projectType}</p>
             <h1 className={`${unbounded.className} text-2xl font-semibold text-white`}>{title}</h1>
             <p className="mt-4 mb-8 text-zinc-300">{description}</p>
