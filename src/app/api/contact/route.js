@@ -1,13 +1,13 @@
 import { sendMail } from "../../../components/pages/contact/sendMail"
 
 export const POST = async (req, res) => {
-    const data = await req.json()
+    const {senderName, email, message} = await req.json()
     
     try {
         await sendMail(
-            data.senderName,
-            data.email,
-            data.message
+            senderName,
+            email,
+            message,
         );
         return new Response("Email sent.", { status: 200 })
 
