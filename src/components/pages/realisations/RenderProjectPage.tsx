@@ -86,7 +86,7 @@ export default function RenderProjectPage({
     <>
       <main className="fade-in flex flex-col pt-2">
         <div className="grid-bg ba-grid anim">
-          <div className="mx-auto flex-row justify-center inner px-8 container">
+          <div className="mx-auto flex-row justify-center inner">
             {" "}
             {/* <PageSEO
               title={title}
@@ -94,7 +94,7 @@ export default function RenderProjectPage({
               imageUrl={banner}
             /> */}
             <div className="relative flex justify-center py-2">
-              <div className="flex flex-col z-50">
+              <div className="flex flex-col z-50 container">
                 <H1 className="mb-4 text-3xl font-bold lg:text-5x dark:text-white">
                   {/* <span className="text-xl font-light text-zinc-400">
                     <Link href="/realisations" className="hover:underline ">
@@ -102,16 +102,22 @@ export default function RenderProjectPage({
                     </Link>
                   </span>
                   <br /> */}
-                  <span className={`${unbounded.className} text-zinc-600 dark:text-zinc-500 uppercase text-base font-normal `}>
+                  <span
+                    className={`${unbounded.className} text-zinc-600 dark:text-zinc-500 uppercase text-base font-normal `}
+                  >
                     {projectType}
                   </span>
 
                   <br />
-                  <span className={`${unbounded.className} dark:text-zinc-300 text-6xl font-semibold flex flex-row justify-between items-baseline`}>
+                  <span
+                    className={`${unbounded.className} dark:text-zinc-300 text-4xl md:text-6xl font-semibold flex break-words flex-col md:flex-row md:justify-between items-baseline`}
+                  >
                     {title}
-                    <Conditional condition={hasDeployments}>
-                      <DeploymentList deployment={deployment} />
-                    </Conditional>
+                    <div className="pt-2 md:pt-0">
+                      <Conditional condition={hasDeployments}>
+                        <DeploymentList deployment={deployment} />
+                      </Conditional>
+                    </div>
                   </span>
                 </H1>
                 <Image
@@ -129,7 +135,7 @@ export default function RenderProjectPage({
           </div>
         </div>
 
-        <div className="pt-12 max-w-[1200px] mx-auto px-8 container">
+        <div className="pt-12 mx-auto container">
           <H2>Description</H2>
           <div className="font-light mb-12 max-w-3xl">{description}</div>
 
@@ -227,7 +233,7 @@ export default function RenderProjectPage({
                   {React.Children.toArray(
                     screenshotsMobile.map(renderScreenShotList)
                   )}
-                  <div className="swiper-custom-pagination mt-2" />
+                  <div className="swiper-custom-pagination mt-2 text-center" />
                 </Swiper>
               </div>
             </Conditional>
