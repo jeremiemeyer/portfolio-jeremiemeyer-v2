@@ -66,9 +66,9 @@ export default function ContactForm() {
       },
       body: JSON.stringify(data),
     }).then((res) => {
-      console.log("Response received")
+      // console.log("Response received")
       if (res.status === 200) {
-        console.log("Response succeeded!")
+        // console.log("Response succeeded!")
         form.reset()
       }
       setSubmitted(true)

@@ -5,17 +5,15 @@ import { Badge } from "@/components/ui/badge"
 
 export default function Skills() {
   const skills = [
+    "React.js",
+    "Next.js",
+    "Redux",
     "TypeScript",
     "JavaScript",
-    "Tailwind",
-    "HTML5",
-    "CSS3",
-    "Jquery",
-    "React",
-    "Nextjs",
-    "Nodejs",
-    "Express",
-    "Git",
+    "TailwindCSS",
+    "Node.js",
+    "Express.js",
+    "GitHub",
   ]
 
   return (
@@ -24,8 +22,8 @@ export default function Skills() {
         <div className="flex flex-col lg:flex-col-reverse gap-16">
           <div className="space-y-4">
             <HeadingText title="Compétences" />
-            <div className="flex flex-col-reverse lg:flex-row gap-16 items-center">
-              <div className="space-x-2">
+            <div className="flex flex-row lg:flex-row gap-16 items-center">
+              <div className="space-x-2 space-y-2">
                 {skills.map((skill) => (
                   <Badge
                     className="lg:text-sm bg-blue-500 hover:bg-blue-400 dark:bg-blue-800 dark:hover:bg-blue-700"
