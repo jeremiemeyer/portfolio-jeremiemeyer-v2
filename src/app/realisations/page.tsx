@@ -22,7 +22,7 @@ export default function Projects() {
       /> */}
 
       <main className="fade-in container flex flex-col items-center py-4 divide-y-2 divide-gray-100 dark:divide-gray-800 sm:py-8">
-        <div className="flex flex-col items-center space-y-2 text-center">
+        <div className="flex flex-col items-center space-y-2 text-center my-6">
           <HeadingText title="Réalisations" />
         </div>
         <div className="flex flex-wrap gap-2">

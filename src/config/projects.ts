@@ -86,7 +86,7 @@ export const projects: Project[] = [
 
     React.createElement('br', null),
     React.createElement('br', null),
-    React.createElement(H3,  { style : { fontSize: '20px', fontWeight: '600', marginBottom: '12px'} }, 'Bibliothèques utilisées'),
+    React.createElement(H2,  { style : { fontSize: '20px', fontWeight: '600', marginBottom: '12px'} }, 'Bibliothèques utilisées'),
     React.createElement('ul', { style: { fontSize: '16px' } },
     React.createElement('li', { style: { listStyleType: 'circle', marginLeft: '20px', marginBottom: '2px' } },
       React.createElement('a', { href: 'https://chakra-ui.com/', target: '_blank' }, 'Chakra UI')

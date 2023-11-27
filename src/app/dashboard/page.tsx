@@ -33,15 +33,15 @@ export default async function Dashboard() {
 
   return (
     <main className="fade-in container divide-y-2 divide-gray-100 dark:divide-gray-800 py-4 sm:py-8 flex flex-col items-center">
-      <div className="flex flex-col items-center space-y-2 text-center ">
+      <div className="flex flex-col items-center space-y-2 text-center my-6">
         <HeadingText title="Dashboard" subtext="Statistiques sur mon travail" />
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 pt-4">
           <Suspense fallback={<DashboardSkeleton />}>
             <CodeTime />
             <Languages languages={languages} />
           </Suspense>
         </div>
-        <div className="pt-2 flex flex-col items-center">
+        <div className="flex flex-col items-center">
           <p className="blue_gradient">
             Statistiques par{" "}
             <Link
@@ -53,7 +53,7 @@ export default async function Dashboard() {
             </Link>
           </p>
 
-          <section className="py-16 px-8 md:px-0 lg:py-32 space-y-4 text-left">
+          <section className="py-16 px-8 md:px-0  space-y-4 text-left">
           <HeadingText
             title="GitHub Repo"
           />
