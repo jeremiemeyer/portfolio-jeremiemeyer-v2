@@ -10,7 +10,7 @@ const api = wretch("https://wakatime.com", { cache: "no-store" })
 export const getCodingStats = async () => {
   return await api
     .headers({
-      Authorization: `Basic ${Buffer.from("waka_9c294d1c-a053-4997-bda7-16d4e2615114").toString(
+      Authorization: `Basic ${Buffer.from("waka_9355036d-f43e-4895-988e-5f3b2d8fac04").toString(
         "base64"
       )}`,
     })
