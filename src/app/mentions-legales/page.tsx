@@ -15,7 +15,7 @@ export default function Contact() {
       <ul>
         <li className="text-xl">Jeremie Meyer, autoentreprise</li>
         <li>SIREN : 947 456 414</li>
-        <li>Contact : <span className="blue_gradient"><Link href="tel:+33670439391">+33 (0)6 70 43 93 91</Link> / <Link href="mailto:jeremie.meyer357@gmail.com">jeremie.meyer357@gmail.com</Link></span></li>
+        <li>Contact : <span className="blue_gradient"><Link href="mailto:jeremie.meyer357@gmail.com">jeremie.meyer357@gmail.com</Link></span></li>
         {/* <li>Numéro TVA : xxx</li> */}
         <li>
           Site hébergé par :{" "}

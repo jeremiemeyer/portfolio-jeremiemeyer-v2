@@ -46,7 +46,7 @@ export const projects: Project[] = [
     website: 'https://buffroo.vercel.app',
     //I want to put a JSX element here (instead of '') so that it gets used in place of the {description} in the RenderProjectPage.tsx file
     description: React.createElement('div', null,
-    React.createElement('p', null, 'Une web app permettant de renseigner le détail de ses séances de sport et de suivre sa progression au fil des semaines.'),
+    React.createElement('p', null, 'Une web-app permettant de renseigner le détail de ses séances de sport (musculation) et de suivre sa progression au fil des semaines.'),
     React.createElement('br', null),
     React.createElement('p', null, 'Ce projet full-stack comprend :'),
     React.createElement('ul', { style: { listStyleType: 'circle', marginLeft: '20px' } },
@@ -60,9 +60,9 @@ export const projects: Project[] = [
     React.createElement(H2,  { style : { fontSize: '20px', fontWeight: '600', marginBottom: '12px'} }, 'Fonctionnalités'),
     React.createElement(H3,  { style : { fontSize: '16px', fontWeight: '600', marginTop: '16px', marginBottom: '4px'} }, 'Entraînement'),
     React.createElement('ul', { style : { fontSize: '16px'} },
-      React.createElement('li', { style : { marginBottom: '2px'} }, `🏋️‍♀️ Accédez à une bibliothèque exhaustive d'exercises ;`),
+      React.createElement('li', { style : { marginBottom: '2px'} }, `🏋️‍♀️ Accédez à une bibliothèque exhaustive d'exercices ;`),
       React.createElement('li', { style : { marginBottom: '2px'} }, `✅ Ajoutez vos propres exercices ;`),
-      React.createElement('li', { style : { marginBottom: '2px'} }, `📝 Renseignez vos séances en temps réel (exercices, poids, nombre répétitions) ;`),
+      React.createElement('li', { style : { marginBottom: '2px'} }, `📝 Renseignez vos séances en temps réel (exercices, poids, nombre de répétitions) ;`),
       React.createElement('li', { style : { marginBottom: '2px'} }, `🧾 Créez des templates pour démarrer un entraînement avec une liste prédéfinie d'exercices ;`),
     ), 
 
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     React.createElement('ul', { style : { fontSize: '16px'} },
       React.createElement('li', { style : { marginBottom: '2px'} }, `🎯 Définissez vos objectifs ;`),
       React.createElement('li', { style : { marginBottom: '2px'} }, `🗓️ Accédez à l'historique de vos entraînements ;`),
-      React.createElement('li', { style : { marginBottom: '2px'} }, `📈 Suivez votre progression au fil des semaines ;`),
+      React.createElement('li', { style : { marginBottom: '2px'} }, `📈 Suivez votre progression au fil des semaines à l'aide de graphiques ;`),
     ),        
 
     React.createElement(H3,  { style : { fontSize: '16px', fontWeight: '600', marginTop: '16px', marginBottom: '4px'} }, 'Expérience utilisateur'),
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     ),
     React.createElement(H3,  { style : { fontSize: '16px', fontWeight: '600', marginTop: '16px', marginBottom: '4px'} }, 'Sécurité'),
     React.createElement('ul', { style : { fontSize: '16px'} },
-      React.createElement('li', { style : { marginBottom: '2px'} }, `🔒 Chiffrage de vos données sensibles sur nos serveurs ;`),
+      React.createElement('li', { style : { marginBottom: '2px'} }, `🔒 Chiffrage des données sensibles.`),
     ),        
 
     React.createElement('br', null),
@@ -105,6 +105,12 @@ export const projects: Project[] = [
     ),
     React.createElement('li', { style: { listStyleType: 'circle', marginLeft: '20px', marginBottom: '2px' } },
       React.createElement('a', { href: 'https://www.npmjs.com/package/react-timer-hook', target: '_blank' }, 'react-timer-hook')
+    ),
+    React.createElement('li', { style: { listStyleType: 'circle', marginLeft: '20px', marginBottom: '2px' } },
+      React.createElement('a', { href: 'https://www.npmjs.com/package/bcryptjs', target: '_blank' }, 'bcryptjs')
+    ),
+    React.createElement('li', { style: { listStyleType: 'circle', marginLeft: '20px', marginBottom: '2px' } },
+      React.createElement('a', { href: 'https://www.npmjs.com/package/jsonwebtoken', target: '_blank' }, 'jsonwebtoken')
     )
   ),
   ),
