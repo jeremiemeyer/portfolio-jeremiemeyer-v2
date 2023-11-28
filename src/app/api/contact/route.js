@@ -1,4 +1,4 @@
-import { sendMail } from "../../../components/pages/contact/sendMail"
+import { sendMail } from "@/components/pages/contact/sendMail"
 
 export const POST = async (req, res) => {
     const {senderName, email, message} = await req.json()

@@ -41,10 +41,8 @@ export async function sendMail(senderName, senderEmail, msg) {
       } else {
         console.log(info)
         resolve(info)
-        return true
       }
     })
   })
 
-  res.status(200).json({ status: "OK" })
 }
