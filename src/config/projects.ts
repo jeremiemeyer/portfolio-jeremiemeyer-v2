@@ -119,10 +119,10 @@ export const projects: Project[] = [
       ,
     repository: '',
     stack: [
-      Stack.react,
+      Stack.reactjs,
       Stack.typescript,
       Stack.tailwindcss,
-      Stack.node,
+      Stack.nodejs,
       Stack.express,
       Stack.mongo,
     ],
@@ -163,9 +163,10 @@ export const projects: Project[] = [
       'Mon portfolio personnel.',
     repository: '',
     stack: [
-      Stack.javascript,
-      Stack.node,
-      Stack.react
+      Stack.nextjs,
+      Stack.reactjs,
+      Stack.typescript,
+      Stack.nodejs,
     ],
     dimensions: [360, 640],
     screenshotsDesktop: ['/static/projects/portfolio-jm/screenshots/desktop/screenshot01.jpg'],
@@ -203,7 +204,8 @@ export const projects: Project[] = [
     repository: '',
     stack: [
       Stack.javascript,
-      Stack.node,
+      Stack.nodejs,
+      Stack.express,
     ],
     dimensions: [360, 640],
     screenshotsDesktop: ['/static/projects/denat-environnement/screenshots/desktop/screenshot01.jpg',

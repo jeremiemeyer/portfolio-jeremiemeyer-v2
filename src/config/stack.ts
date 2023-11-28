@@ -8,15 +8,16 @@ export enum Stack {
   python,
 
   // Frontend
-  react,
+  reactjs,
+  nextjs,
   reactnative,
   tailwindcss,
 
   // Backend
   graphql,
-  node,
-  django,
+  nodejs,
   express,
+  django,
 
   // Cloud
   aws,
@@ -42,7 +43,7 @@ export const WorkStack = [
   Stack.go,
   Stack.typescript,
   Stack.python,
-  Stack.react,
+  Stack.reactjs,
   Stack.aws,
   Stack.gcp,
   Stack.kubernetes,
@@ -79,9 +80,13 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
     value: 'Go',
     color: Colors.go,
   },
-  [Stack.react]: {
-    value: 'React',
-    color: Colors.react,
+  [Stack.reactjs]: {
+    value: 'React.js',
+    color: Colors.reactjs,
+  },
+  [Stack.nextjs]: {
+    value: 'Next.js',
+    color: Colors.nextjs,
   },
   [Stack.reactnative]: {
     value: 'React Native',
@@ -103,9 +108,9 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
     value: 'Python',
     color: Colors.python,
   },
-  [Stack.node]: {
-    value: 'Node',
-    color: Colors.node,
+  [Stack.nodejs]: {
+    value: 'Node.js',
+    color: Colors.nodejs,
   },
   [Stack.express]: {
     value: 'Express',

@@ -9,7 +9,7 @@ export const metadata = {
 export default function Contact() {
   return (
     <main className="text-black dark:text-zinc-300 fade-in container py-4 sm:py-8 flex flex-col items-center">
-      <div className="flex flex-col items-center text-center space-y-2 pb-12">
+      <div className="flex flex-col items-center text-center space-y-2 my-6 pb-12">
         <HeadingText
           title="RGPD"
           subtext="Déclaration relatives aux données personnelles"

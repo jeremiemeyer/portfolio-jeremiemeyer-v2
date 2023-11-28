@@ -42,7 +42,7 @@ export default function Navbar() {
   }, [navbar])
 
   return (
-    <nav className="bg-blur bg-gray-100 dark:bg-gray-800 bg-opacity-70 dark:bg-opacity-50 border border-gray-400 border-opacity-20 dark:border-slate-700 dark:border-opacity-30 rounded-full mt-3 select-none sticky top-0 z-50 w-full max-w-[1200px] mx-auto">
+    <nav className="bg-blur bg-gray-100 dark:bg-gray-800 bg-opacity-70 dark:bg-opacity-50 border border-gray-400 border-opacity-20 dark:border-slate-700 dark:border-opacity-30 rounded-full mt-3 select-none sticky top-0 z-50 w-full max-w-[1000px] mx-auto">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-3 md:block">

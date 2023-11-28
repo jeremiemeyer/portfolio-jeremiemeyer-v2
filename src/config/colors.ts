@@ -7,13 +7,13 @@ export const Colors = {
 
   // Frontend
   web: "#2D2D2D",
-  react: "#61DAF6",
+  reactjs: "#61DAF6",
   nextjs: "#000000",
   tailwindcss: "#38BDF8",
 
   // Backend
   graphql: "#E535AB",
-  node: "#68A063",
+  nodejs: "#68A063",
   express: "#808080",
   django: "#092E20",
 
