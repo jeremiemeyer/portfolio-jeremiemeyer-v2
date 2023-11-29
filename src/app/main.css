@@ -179,30 +179,35 @@
 
 @media screen and (min-width: 1200px) {
   .swiper-container {
-    width: 1000px;
+    width: 950px;
   }
 }
 
 
-/* Box hover effect  */
+/* Box hover effect */
 .boxhovereffect {
-  z-index: 500;
-  --c: rgba(37, 99, 235, 0.8);
-  --b: 4px;
-  --g: 20px;
+  z-index: 1;
+  --c: rgba(37, 99, 235, 1);
+  --b: 8px;
+  --g: 30px;
   padding: calc(var(--g) + var(--b));
   --_g: #0000 25%, var(--c) 0;
   background: conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat, conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0 var(--_i, 200%)/var(--_i, var(--b)) 200% no-repeat;
-  transition: .3s, background-position .3s .3s;
+  transition: .3s, background-position .3s .3s; /* Added border-radius transition */
   cursor: pointer;
+  border-radius: 20px; /* Set the desired border-radius */
 }
 
 .boxhovereffect:hover {
-  z-index: 500;
+  z-index: 1;
   --_i: 100%;
-  transition: .3s, background-size .3s .3s;
+  transition: .3s, background-size .3s .3s, border-radius 0s 0s; /* Added border-radius transition */
+  border-radius: 20px; /* Set the desired border-radius */
 }
 
+.boxhovereffect:not(:hover) {
+  border-radius: 20px;
+}
 
 /* Grid background */
 /* Source : https://codepen.io/iqszlong/pen/RYxYmw */

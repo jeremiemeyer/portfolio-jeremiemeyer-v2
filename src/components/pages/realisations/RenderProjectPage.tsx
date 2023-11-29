@@ -180,7 +180,7 @@ export default function RenderProjectPage({
                       slidesPerView: 1,
                     },
                     1200: {
-                      width: 1000,
+                      width: 950,
                       slidesPerView: 1,
                     },
                   }}
@@ -228,7 +228,7 @@ export default function RenderProjectPage({
                       slidesPerView: 1,
                     },
                     1200: {
-                      width: 1000,
+                      width: 950,
                       slidesPerView: 1,
                     },
                   }}

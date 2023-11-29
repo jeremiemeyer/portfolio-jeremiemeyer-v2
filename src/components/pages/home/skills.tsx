@@ -24,6 +24,9 @@ export default function Skills() {
             <HeadingText title="Compétences" />
             <div className="flex flex-row lg:flex-row gap-16 items-center">
               <div className="space-x-2 space-y-2">
+              {/* <p className="lg:text-lg text-zinc-500 dark:text-zinc-400">
+                {'Connaissance du stack MERN (MongoDB, Express, React.js, Node.js) dans son ensemble.'}
+              </p> */}
                 {skills.map((skill) => (
                   <Badge
                     className="lg:text-sm bg-blue-500 hover:bg-blue-400 dark:bg-blue-800 dark:hover:bg-blue-700"

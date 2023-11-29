@@ -1,4 +1,4 @@
-import ContactForm from "@/components/pages/contact-form"
+import ContactForm from "@/components/shared/contact-form"
 import SocialMediaIcons from "@/components/common/social-media-icons"
 import HeadingText from "@/components/common/heading-text"
 

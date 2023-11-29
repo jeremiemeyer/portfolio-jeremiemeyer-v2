@@ -14,22 +14,21 @@ export default function AboutMe() {
           <HeadingText title="Qui suis-je ?" />
           <div className="flex flex-col-reverse lg:flex-row items-center">
             <div>
-              <p className="lg:text-lg text-zinc-500 dark:text-zinc-400">
-                Hello ! 👋 Je créé des applications modernes et rapides avec
-                React.js et Next.js.
+              <p className="lg:text-lg text-zinc-500 dark:text-zinc-400 mb-6">
+                Hello ! 👋 Je suis un développeur front-end freelance spécialisé dans la création de sites internet et de web-apps.
                 <br /> <br />
-                Je peux m'occuper de :
+                Mon domaine d'intervention :
                 <ul className="px-8">
                   <li style={{ listStyleType: "circle" }}>
-                    votre site internet sur mesure
+                    création de sites internet sur mesure pour sociétés et particuliers (sites vitrine, landing page)
                   </li>
                   <li style={{ listStyleType: "circle" }}>
-                    votre landing page
-                  </li>
-                  <li style={{ listStyleType: "circle" }}>
-                    votre web-app etc.
+                    création de web-apps interactives
                   </li>
                 </ul>
+              </p>
+              <p className="lg:text-lg text-zinc-500 dark:text-zinc-400">
+                J'utilise React.js et Next.js pour créer des web-apps modernes et rapides, avec un maximum de valeur ajoutée pour votre projet.
               </p>
             </div>
 

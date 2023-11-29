@@ -7,7 +7,7 @@ import Card from "@/components/Card"
 import { Header } from "@/components/Form"
 import siteMetadata from "@/data/siteMetadata"
 import config from "@/config"
-import ProjectCard from "@/components/pages/home/project-card"
+import ProjectCard from "@/components/shared/project-card"
 
 export const metadata = {
   title: "Réalisations | Jeremie Meyer",

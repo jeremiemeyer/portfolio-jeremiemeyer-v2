@@ -1,5 +1,5 @@
 import HeadingText from "@/components/common/heading-text"
-import ContactForm from "../contact-form"
+import ContactForm from "../../shared/contact-form"
 
 export default function Contact() {
   return (
