@@ -64,9 +64,8 @@
   }
 
   /* html {
-    max-width: 1000px;
-    justify-content: center;
-  } */
+    scroll-behavior: smooth; 
+  }  */
 
   .dark {
     --background: 240 10% 3.9%;
@@ -237,3 +236,4 @@
 .flex-between {
   @apply flex justify-between items-center;
 }
+

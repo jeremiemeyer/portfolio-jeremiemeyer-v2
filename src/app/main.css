@@ -215,6 +215,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: fixed;
 }
 
 .ba-grid {
@@ -302,4 +303,16 @@
   100% {
     background-position: calc(var(--point-gap-width) / 2) calc(var(--point-gap-height) / 2 * -1);
   }
+}
+
+a.blog-post-anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
+.active {
+  color: #2563eb;
+  transition: ease-in-out 0.3s
 }

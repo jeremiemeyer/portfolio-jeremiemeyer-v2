@@ -19,6 +19,8 @@ export const metadata = {
   description: siteConfig.description,
   keywords: [
     "Création site internet",
+    "développpeur",
+    "freelance",
     "Wordpress",
     "Next.js",
     "React",
@@ -44,13 +46,13 @@ export const metadata = {
     description: siteConfig.description,
     siteName: siteConfig.name,
   },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/og.jpg`],
-    creator: "@_rdev7",
-  },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   title: siteConfig.name,
+  //   description: siteConfig.description,
+  //   images: [`${siteConfig.url}/og.jpg`],
+  //   creator: "@_rdev7",
+  // },
   icons: {
     icon: "/favicon.ico",
   },

@@ -19,6 +19,10 @@ export default function Navbar() {
       path: "/realisations",
       name: "Réalisations",
     },
+    // {
+    //   path: "/blog",
+    //   name: "Blog",
+    // },
     {
       path: "/dashboard",
       name: "Dashboard",

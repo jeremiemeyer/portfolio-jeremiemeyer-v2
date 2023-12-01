@@ -8,8 +8,8 @@ export const siteConfig: SiteConfig = {
   url: env.NEXT_PUBLIC_APP_URL,
   links: {
     github: "https://github.com/jeremiemeyer",
-    // facebook: "https://facebook.com/redpangilinan15",
-    // twitter: "https://twitter.com/_rdev7",
+    // facebook: "",
+    // twitter: "",
     linkedin: "https://www.linkedin.com/in/jeremiemeyer/",
     personal: "https://www.jeremiemeyer.fr",
   },

@@ -6,7 +6,7 @@ import { H1, H2, H3 } from "@/components/Form"
 import DeploymentList from "@/components/list/DeploymentList"
 import StackList from "@/components/list/StackList"
 import { PageSEO } from "@/components/SEO"
-import config from "../../../config"
+import config from "@/config"
 import type { Project, SubProject } from "@/config/projects"
 import { defaultDimensions } from "@/config/projects"
 import Image from "next/image"
@@ -98,9 +98,9 @@ export default function RenderProjectPage({
             />
             <div className="relative flex justify-center py-2">
               <div className="flex flex-col z-50 container">
-                <H1 className="mb-4 text-3xl font-bold lg:text-5x dark:text-white">
+                <div className="mb-4 text-3xl font-bold lg:text-5x dark:text-white">
                   <span className="text-xl font-light text-zinc-300">
-                    <Link href="/realisations" className="hover:underline text-xs text-zinc-500">
+                    <Link href="/realisations" className="hover:underline text-zinc-500 text-[0.8em]">
                       {`< voir tous les projets`}
                     </Link>
                   </span>
@@ -122,7 +122,7 @@ export default function RenderProjectPage({
                       </Conditional>
                     </div>
                   </span>
-                </H1>
+                </div>
                 <Image
                   loading="eager"
                   src={banner}
@@ -139,8 +139,7 @@ export default function RenderProjectPage({
         </div>
 
         <div className="mt-8 mx-auto container">
-          <H2>Description</H2>
-          <div className="font-light mb-12 max-w-3xl">{description}</div>
+          <div className="text-zinc-700 dark:text-zinc-300 mb-12 max-w-3xl">{description}</div>
 
           <div className="mb-2">
             <Conditional condition={hasDesktopScreenshots}>

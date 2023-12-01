@@ -13,7 +13,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
 import CookiesConsent from "@/components/CookiesConsent"
-import { worksans } from "./fonts"
+import { worksans, lato } from "./fonts"
 
 
 
