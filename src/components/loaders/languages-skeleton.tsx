@@ -1,11 +1,9 @@
 import {
   Card,
-  CardDescription,
   CardContent,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from "recharts"
 import { Skeleton } from "../ui/skeleton"
 
 const dimensions = {

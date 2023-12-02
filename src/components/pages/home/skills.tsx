@@ -1,5 +1,3 @@
-import CircleSkills from "./circle-skills"
-import Certifications from "./certifications"
 import HeadingText from "@/components/common/heading-text"
 import { Badge } from "@/components/ui/badge"
 

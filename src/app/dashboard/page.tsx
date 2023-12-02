@@ -1,5 +1,3 @@
-import { Suspense } from "react"
-import DashboardSkeleton from "@/components/loaders/dashboard-skeleton"
 import Languages from "@/components/pages/dashboard/languages"
 import CodeTime from "@/components/pages/dashboard/code-time"
 import HeadingText from "@/components/common/heading-text"
@@ -8,7 +6,6 @@ import { Languages as LanguagesType } from "@/types"
 import { getCodingStats } from "@/lib/api/wakatime"
 import { getRepo } from "@/lib/api/github"
 import GitHubRepo from "@/components/pages/dashboard/github-repo"
-import ProjectsSkeleton from "@/components/loaders/projects-skeleton"
 import { siteConfig } from "@/../config/site"
 
 export const metadata = {

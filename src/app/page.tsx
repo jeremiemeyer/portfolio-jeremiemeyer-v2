@@ -1,9 +1,6 @@
-import { Suspense } from "react"
 import { siteConfig } from "@/../config/site"
 import Hero from "@/components/pages/home/hero"
 // import Projects from "@/components/pages/home/old.projects"
-import HeadingText from "@/components/common/heading-text"
-import ProjectsSkeleton from "@/components/loaders/projects-skeleton"
 import './main.css'
 import './globals.css'
 import AboutMe from "@/components/pages/home/about-me"

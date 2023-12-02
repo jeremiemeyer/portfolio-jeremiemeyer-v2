@@ -1,4 +1,3 @@
-import { Colors } from './../../config/colors';
 import { Deployment } from '../../config/projects';
 import React from 'react';
 import { AiOutlineLink } from 'react-icons/ai';

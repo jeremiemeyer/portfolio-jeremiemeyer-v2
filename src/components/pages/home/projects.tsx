@@ -1,5 +1,4 @@
 import HeadingText from "@/components/common/heading-text"
-import { Badge } from "@/components/ui/badge"
 import ProjectCard from "../../shared/project-card"
 import config from "@/config"
 

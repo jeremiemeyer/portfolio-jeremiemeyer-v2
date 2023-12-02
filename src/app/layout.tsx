@@ -1,8 +1,5 @@
 "use client"
-
 import "./globals.css"
-import { siteConfig } from "@/../config/site"
-import { Cookie, Inter, Noto_Sans, Unbounded, Work_Sans } from "next/font/google"
 import Navbar from "../components/layout/navbar"
 import Footer from "../components/layout/footer"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -12,8 +9,7 @@ import "./globals.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
-import CookiesConsent from "@/components/CookiesConsent"
-import { worksans, lato } from "./fonts"
+import { worksans } from "./fonts"
 
 
 

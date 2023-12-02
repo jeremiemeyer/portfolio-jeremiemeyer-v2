@@ -1,8 +1,6 @@
 'use client'
-import { getCodingStats } from "@/lib/api/wakatime"
 import {
   Card,
-  CardDescription,
   CardContent,
   CardHeader,
   CardTitle,
@@ -10,13 +8,6 @@ import {
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from "recharts"
 import { Languages } from "@/types"
 
-
-// type BarProps = {
-//   data: ResponseData
-//   dimensions: {
-//     [key: string]: number
-//   }
-// }
 
 interface LanguagesProps {
   languages: Languages[]

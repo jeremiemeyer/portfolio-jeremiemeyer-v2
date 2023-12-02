@@ -1,11 +1,5 @@
 // "use client"
-import { Suspense } from "react"
-import DashboardSkeleton from "@/components/loaders/dashboard-skeleton"
 import HeadingText from "@/components/common/heading-text"
-import Card from "@/components/card"
-// import { PageSEO } from "@/components/SEO"
-import { Header } from "@/components/form"
-import siteMetadata from "@/data/siteMetadata"
 import config from "@/config"
 import ProjectCard from "@/components/shared/project-card"
 

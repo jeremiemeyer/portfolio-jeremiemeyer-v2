@@ -1,4 +1,3 @@
-import { getCodingStats } from "@/lib/api/wakatime"
 import {
   Card,
   CardDescription,

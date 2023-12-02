@@ -1,4 +1,3 @@
-import DashboardSkeleton from "@/components/loaders/dashboard-skeleton"
 import HeadingText from "@/components/common/heading-text"
 import ProjectsSkeleton from "@/components/loaders/projects-skeleton"
 import CodeTimeSkeleton from "@/components/loaders/codetime-skeleton"

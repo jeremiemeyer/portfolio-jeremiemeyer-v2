@@ -5,7 +5,6 @@ export default function BlogEntryCard({
   title,
   datePublished,
   shortDescription,
-  content,
   slug,
 }: {
   title: string

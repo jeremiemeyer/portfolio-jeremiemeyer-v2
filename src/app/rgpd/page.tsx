@@ -1,5 +1,5 @@
 import HeadingText from "@/components/common/heading-text"
-import { H1, H2, H3 } from "@/components/form"
+import { H2 } from "@/components/form"
 import Link from "next/link"
 
 export const metadata = {
