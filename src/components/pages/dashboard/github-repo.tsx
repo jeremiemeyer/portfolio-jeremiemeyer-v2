@@ -24,7 +24,7 @@ export default async function GitHubRepo({repoData}: GitHubRepoProps) {
       {repoData.map((project, index) => (
         <Card
           key={index}
-          className="border-gray-200 dark:border-gray-800 hover:bg-gray-200 dark:hover:bg-gray-900"
+          className="border border-gray-400 border-opacity-20 dark:border-slate-700 dark:border-opacity-30 hover:bg-gray-200 dark:hover:bg-gray-900"
         >
           <CardHeader>
             <div className="flex justify-between">

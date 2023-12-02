@@ -16,7 +16,7 @@ interface CodeTimeProps {
 export default async function CodeTime({ started, totalTime, languages }: CodeTimeProps) {
 
   return (
-    <Card className="flex-grow h-full  border border-gray-400 border-opacity-20 dark:border-slate-700 dark:border-opacity-30">
+    <Card className="flex-grow h-full border border-gray-400 border-opacity-20 dark:border-slate-700 dark:border-opacity-30">
       <CardHeader>
         <CardTitle>Temps de codage</CardTitle>
         <CardDescription>la semaine dernière</CardDescription>

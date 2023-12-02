@@ -37,7 +37,7 @@ export default async function Languages({ languages }: LanguagesProps) {
 
   return (
     <>
-      <Card className="w-full">
+      <Card className="w-full border border-gray-400 border-opacity-20 dark:border-slate-700 dark:border-opacity-30">
         <CardHeader>
           <CardTitle className="text-lg">Langages utilisés</CardTitle>
         </CardHeader>

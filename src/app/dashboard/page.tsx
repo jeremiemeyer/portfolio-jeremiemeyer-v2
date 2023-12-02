@@ -7,6 +7,7 @@ import { getCodingStats } from "@/lib/api/wakatime"
 import { getRepo } from "@/lib/api/github"
 import GitHubRepo from "@/components/pages/dashboard/github-repo"
 import { siteConfig } from "@/../config/site"
+import CodeTimeSkeleton from "@/components/loaders/codetime-skeleton"
 
 export const metadata = {
   title: "Dashboard | Jeremie Meyer",
@@ -31,9 +32,9 @@ export default async function Dashboard() {
 
   return (
     <main className="fade-in container py-4 sm:py-8 flex flex-col items-center w-full">
-      <section className="flex flex-col items-center space-y-2 text-center my-6">
+      <section className="flex flex-col items-center space-y-2 text-center my-6 w-full">
         <HeadingText title="Dashboard" subtext="Statistiques sur mon travail" />
-        <div className="flex flex-wrap gap-2 pt-4">
+        <div className="flex flex-col gap-2 pt-4 w-full">
           <CodeTime
             started={started}
             totalTime={totalTime}

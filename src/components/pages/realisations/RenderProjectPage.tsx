@@ -229,11 +229,6 @@ export default function RenderProjectPage({
           </div>
         </div>
 
-        {/* <Conditional condition={hasSubProjects}>
-              <H2 className="mt-4">More Products</H2>
-              <p className="mt-1 mb-4 font-light">Some additional products</p>
-              {React.Children.toArray(subProjects.map(renderSubProjectList))}
-            </Conditional> */}
       </main>
     </>
   )
