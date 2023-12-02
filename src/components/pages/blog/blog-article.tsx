@@ -37,11 +37,6 @@ export default function BlogArticle({ params }: { params: { slug: string } }) {
         <div className="grid-bg ba-grid anim">
           <div className="mx-auto flex-row justify-center inner pt-20">
             {" "}
-            {/* <PageSEO
-              title={title}
-              description={shortDescription}
-              imageUrl={banner}
-            /> */}
             <div className="relative flex justify-center py-2">
               <div className="flex flex-col z-50 container">
                 <div className="mb-4 text-3xl font-bold lg:text-5x dark:text-white">
@@ -62,7 +57,7 @@ export default function BlogArticle({ params }: { params: { slug: string } }) {
                     {title}
                   </span>
                   <span
-                    className={` text-zinc-600 dark:text-zinc-400 text-base font-normal justify-between flex flex-row`}
+                    className={` text-zinc-600 dark:text-zinc-400 text-base font-normal justify-between flex flex-col md:flex-row`}
                   >
                     <span className="font-semibold">{formattedDate} </span>{" "}
                     <span>Temps de lecture : {readingTimeInMinutes} min</span>
