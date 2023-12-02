@@ -10,13 +10,18 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Repo } from "@/types"
 
-export default async function GitHubRepo() {
-  const data = (await getRepo()) as Repo[]
+
+interface GitHubRepoProps {
+  repoData: Repo[]
+}
+
+export default async function GitHubRepo({repoData}: GitHubRepoProps) {
 
   return (
     <>
-      {data.map((project, index) => (
+      {repoData.map((project, index) => (
         <Card
           key={index}
           className="border-gray-200 dark:border-gray-800 hover:bg-gray-200 dark:hover:bg-gray-900"

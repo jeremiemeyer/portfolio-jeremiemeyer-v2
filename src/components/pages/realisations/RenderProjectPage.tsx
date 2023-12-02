@@ -1,13 +1,12 @@
 //@ts-nocheck
 "use client"
-import Conditional from "@/components/Conditional"
+import Conditional from "@/components/conditional"
 import Link from "next/link"
-import { H1, H2, H3 } from "@/components/Form"
-import DeploymentList from "@/components/list/DeploymentList"
-import StackList from "@/components/list/StackList"
-import { PageSEO } from "@/components/SEO"
+import { H2 } from "@/components/form"
+import DeploymentList from "@/components/list/deployment-list"
+import StackList from "@/components/list/stack-list"
 import config from "@/config"
-import type { Project, SubProject } from "@/config/projects"
+import type { Project } from "@/config/projects"
 import { defaultDimensions } from "@/config/projects"
 import Image from "next/image"
 import React, { useCallback } from "react"
@@ -67,18 +66,10 @@ export default function RenderProjectPage({
     [height, width]
   )
 
-  // const renderSubProjectList = useCallback(
-  //   ({ title, deployment, description }: SubProject) => (
-  //     <>
-  //       <H3>{title}</H3>
-  //       <Conditional condition={!!deployment}>
-  //         <DeploymentList deployment={deployment} />
-  //       </Conditional>
-  //       <p className="mt-2 mb-4 font-light">{description}</p>
-  //     </>
-  //   ),
-  //   []
-  // )
+  const metadata = {
+    title: `${title} | Jeremie Meyer`,
+    description: `Projets réalisés`,
+  }
 
   const hasDeployments = !!deployment
   const hasDesktopScreenshots = !!screenshotsDesktop.length
@@ -91,11 +82,7 @@ export default function RenderProjectPage({
         <div className="grid-bg ba-grid anim">
           <div className="mx-auto flex-row justify-center inner">
             {" "}
-            <PageSEO
-              title={title}
-              description={shortDescription}
-              imageUrl={banner}
-            />
+
             <div className="relative flex justify-center py-2">
               <div className="flex flex-col z-50 container">
                 <div className="mb-4 text-3xl font-bold lg:text-5x dark:text-white">

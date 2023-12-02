@@ -1,6 +1,5 @@
 "use client"
-
-import StackList from "@/components/list/StackList"
+import StackList from "@/components/list/stack-list"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { unbounded } from "@/app/fonts"

@@ -17,7 +17,6 @@ function Card({ title, description, banner, href } : { title: any; description: 
   return (
     
     <div className='md p-4 md:w-1/2'>
-    {/* <div className='md p-4 md:w-1/2' style={{ maxWidth: '544px' }}> */}
       <div
         className={`${
           banner && 'h-full'

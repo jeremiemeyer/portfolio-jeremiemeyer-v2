@@ -4,9 +4,9 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 export default function DashboardSkeleton() {
   return (
     <>
-      <Card className="flex-grow h-full">
-        <CardHeader>
-          <Skeleton className="h-8 w-[12.5rem]" />
+      <Card className="flex-grow h-full text-center">
+        <CardHeader className="text-center">
+          <Skeleton className="h-8 w-[12.5rem] " />
           <Skeleton className="h-4 w-[8rem]" />
         </CardHeader>
         <CardContent className="text-xl font-medium">

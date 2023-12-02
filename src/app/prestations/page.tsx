@@ -1,5 +1,5 @@
 import HeadingText from "@/components/common/heading-text"
-import Card from "@/components/Card"
+import Card from "@/components/card"
 import config from "./../../config"
 
 export const metadata = {
@@ -9,11 +9,6 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      {/* <PageSEO
-        title={`Projects - ${siteMetadata.author}`}
-        description={siteMetadata.description}
-      /> */}
-      
       <main className="fade-in container flex flex-col items-center py-4 divide-y-2 divide-gray-100 dark:divide-gray-800 sm:py-8">
         <div className="flex flex-col items-center space-y-2 text-center">
           <HeadingText title="Prestations" />

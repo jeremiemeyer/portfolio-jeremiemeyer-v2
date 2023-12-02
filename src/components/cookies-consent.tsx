@@ -5,22 +5,6 @@ import { Button } from "./ui/button"
 const CookiesConsent = (props: any) => {
   const [showConsent, setShowConsent] = useState(true)
 
-  // const [navbar, setNavbar] = useState(false)
-  // const router = useRouter()
-  // const currentPathname = usePathname()
-
-  // const handleClick = async () => {
-  //   setNavbar(false)
-  // }
-
-  // useEffect(() => {
-  //   if (navbar) {
-  //     document.body.style.overflow = "hidden"
-  //   } else {
-  //     document.body.style.overflow = "auto"
-  //   }
-  // }, [navbar])
-
   useEffect(() => {
     if(hasCookie("localConsent")) {
       document.body.style.overflow = "auto"
@@ -52,9 +36,6 @@ const CookiesConsent = (props: any) => {
           Accepter
         </Button>
 
-        {/* <button className="bg-black dark:text-zinc-200 dark:bg-black dark:hover:bg-black dark:hover:bg-opacity-60 py-2 px-8 rounded text-white" onClick={() => acceptCookie()}>
-          Accepter
-        </button> */}
       </div>
     </div>
   )

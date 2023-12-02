@@ -1,4 +1,4 @@
-import { Stack, StackInfo } from "./../../config/stack"
+import { Stack, StackInfo } from "../../config/stack"
 import React, { useCallback } from "react"
 
 interface StackListProps {

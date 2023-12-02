@@ -7,17 +7,14 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-interface ResponseData {
-  data: {
-    human_readable_range: string
-    human_readable_total: string
-  }
+
+interface CodeTimeProps {
+  started: string
+  totalTime: string
+  languages: Languages[]
 }
 
-export default async function CodeTime() {
-  const data = (await getCodingStats()) as ResponseData
-  const started = data.data.human_readable_range
-  const totalTime = data.data.human_readable_total
+export default async function CodeTime({ started, totalTime, languages }: CodeTimeProps) {
 
   return (
     <Card className="flex-grow h-full  border border-gray-400 border-opacity-20 dark:border-slate-700 dark:border-opacity-30">
