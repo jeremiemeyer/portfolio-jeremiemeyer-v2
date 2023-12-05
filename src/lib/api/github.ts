@@ -1,4 +1,5 @@
 import wretch from "wretch"
+import { Repo } from "@/types/api"
 
 // Instantiate and configure wretch
 const api = wretch("https://gh-pinned-repos.egoist.dev", {

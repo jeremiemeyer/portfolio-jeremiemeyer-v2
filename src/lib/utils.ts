@@ -43,50 +43,51 @@ export function readingTime(text: string) {
 }
 
 // add TS
-export function extractTextFromContent(content) {
-  let extractedText = "";
+interface StringNode {
+  type: string;
+  key: null;
+  ref: null;
+  props: {
+    children: string | ReactNode[];
+  };
+  _owner: null;
+  _store: {};
+}
 
-  content.forEach((section) => {
-    if (section.sectionContent) {
-      const sectionText = extractTextFromJSX(section.sectionContent);
-      extractedText += sectionText + " ";
+interface ReactNode {
+  type: string;
+  key: null;
+  ref: null;
+  props: {
+    children: ReactNode[] | string;
+  };
+  _owner: null;
+  _store: {};
+}
+
+// Union type for the different types of nodes in the MDX data
+type MDXNode = string | ReactNode;
+
+// Function to extract text content from the MDX data
+export function extractTextContent(data: MDXNode[]): string {
+  return data.reduce((text: string, node: MDXNode) => {
+    if (typeof node === 'string') {
+      return text + node; // Concatenate strings
+    } else if (node.props && node.props.children) {
+      const childText = extractTextContent(
+        Array.isArray(node.props.children) ? node.props.children : [node.props.children]
+      );
+      return text + childText;
     }
+    return text;
+  }, '');
+};
 
-    if (section.subSections) {
-      section.subSections.forEach((subSection) => {
-        if (subSection.subSectionContent) {
-          const subSectionText = extractTextFromJSX(subSection.subSectionContent);
-          extractedText += subSectionText + " ";
-        }
-      });
-    }
-  });
 
-  return extractedText.trim();
+export default function getFormattedDate(dateString: string): string {
+  return new Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(new Date(dateString))
 }
 
-export function extractTextFromJSX(jsxElement) {
-  let text = "";
 
-  if (typeof jsxElement === "string") {
-    text += jsxElement;
-  } else if (Array.isArray(jsxElement)) {
-    jsxElement.forEach((element) => {
-      text += extractTextFromJSX(element);
-    });
-  } else if (jsxElement.props && jsxElement.props.children) {
-    text += extractTextFromJSX(jsxElement.props.children);
-  }
-
-  return text;
-}
-
-export function getArticleContentAsString(article) {
-  let contentString = "";
-  if (article.content) {
-    contentString = extractTextFromContent(article.content);
-  }
-  return contentString;
-}
 
 export { env }

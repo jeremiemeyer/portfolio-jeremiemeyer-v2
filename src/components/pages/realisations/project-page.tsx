@@ -17,19 +17,16 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import { Zoom, Navigation, Pagination } from "swiper/modules"
 import { unbounded } from "@/app/fonts"
+import { MdArrowBackIos } from "react-icons/md"
 
 const { projects } = config
 
-export default function RenderProjectPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
+export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project: Project | undefined = projects.find(
     (project: Project) => project.slug === params?.slug
   )
   if (!project) {
-    return <div>Project not found</div>;
+    return <div>Project not found</div>
   }
 
   const {
@@ -66,11 +63,6 @@ export default function RenderProjectPage({
     [height, width]
   )
 
-  const metadata = {
-    title: `${title} | Jeremie Meyer`,
-    description: `Projets réalisés`,
-  }
-
   const hasDeployments = !!deployment
   const hasDesktopScreenshots = !!screenshotsDesktop.length
   const hasMobileScreenshots = !!screenshotsMobile.length
@@ -82,13 +74,18 @@ export default function RenderProjectPage({
         <div className="grid-bg ba-grid anim">
           <div className="mx-auto flex-row justify-center inner">
             {" "}
-
             <div className="relative flex justify-center py-2">
               <div className="flex flex-col z-50 container">
-                <div className="mb-4 text-3xl font-bold lg:text-5x dark:text-white">
+                <div className="mb-4 mt-6 font-bold  dark:text-white">
                   <span className="text-xl font-light text-zinc-300">
-                    <Link href="/realisations" className="hover:underline text-zinc-500 text-[0.8em]">
-                      {`< voir tous les projets`}
+                    <Link
+                      href="/realisations"
+                      className="hover:underline text-zinc-500 text-[0.8em]"
+                    >
+                      <p className="hover:underline flex flex-row items-center">
+                        <MdArrowBackIos className="mr-2" />
+                        {`voir tous les projets`}
+                      </p>
                     </Link>
                   </span>
                   <br />
@@ -126,7 +123,9 @@ export default function RenderProjectPage({
         </div>
 
         <div className="mt-8 mx-auto container">
-          <div className="text-zinc-700 dark:text-zinc-300 mb-12 max-w-3xl">{description}</div>
+          <div className="text-zinc-700 dark:text-zinc-300 mb-12 max-w-3xl">
+            {description}
+          </div>
 
           <div className="mb-2">
             <Conditional condition={hasDesktopScreenshots}>
@@ -228,7 +227,6 @@ export default function RenderProjectPage({
             </Conditional>
           </div>
         </div>
-
       </main>
     </>
   )

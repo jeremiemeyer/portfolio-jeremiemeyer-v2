@@ -1,6 +1,6 @@
 // This file contains all types for api calls
 
-type Repo = {
+export type Repo = {
   repo: string
   description: string
   language: string
@@ -10,7 +10,7 @@ type Repo = {
   website: string
 }
 
-type Languages = {
+export type Languages = {
   name: string
   total_seconds: number
   percent: number

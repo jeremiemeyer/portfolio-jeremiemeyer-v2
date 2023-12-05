@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Repo } from "@/types"
+import { Repo } from "@/types/api"
 
 
 interface GitHubRepoProps {

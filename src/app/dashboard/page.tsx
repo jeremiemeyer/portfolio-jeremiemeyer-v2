@@ -2,11 +2,12 @@ import Languages from "@/components/pages/dashboard/languages"
 import CodeTime from "@/components/pages/dashboard/code-time"
 import HeadingText from "@/components/common/heading-text"
 import Link from "next/link"
-import { Languages as LanguagesType } from "@/types"
+import { Languages as LanguagesType } from "@/types/api"
 import { getCodingStats } from "@/lib/api/wakatime"
 import { getRepo } from "@/lib/api/github"
 import GitHubRepo from "@/components/pages/dashboard/github-repo"
 import { siteConfig } from "@/../config/site"
+import { Repo } from "@/types/api"
 import CodeTimeSkeleton from "@/components/loaders/codetime-skeleton"
 
 export const metadata = {

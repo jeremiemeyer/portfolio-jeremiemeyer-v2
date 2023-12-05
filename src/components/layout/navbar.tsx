@@ -2,11 +2,10 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { ModeToggle } from "../mode-toggle"
-import { usePathname, useRouter } from "next/navigation"
+import { usePathname } from "next/navigation"
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false)
-  const router = useRouter()
   const currentPathname = usePathname()
 
   const navlinks = [
@@ -18,10 +17,10 @@ export default function Navbar() {
       path: "/realisations",
       name: "Réalisations",
     },
-    // {
-    //   path: "/blog",
-    //   name: "Blog",
-    // },
+    {
+      path: "/blog",
+      name: "Blog",
+    },
     {
       path: "/dashboard",
       name: "Dashboard",
@@ -112,7 +111,7 @@ export default function Navbar() {
                       ? currentPathname === "/"
                         ? "text-zinc-900 dark:text-zinc-100"
                         : " text-zinc-400 dark:text-zinc-400"
-                      : currentPathname.startsWith(link.path)
+                      : currentPathname?.startsWith(link.path)
                       ? "text-zinc-900 dark:text-zinc-100"
                       : " text-zinc-400 dark:text-zinc-400"
                   }

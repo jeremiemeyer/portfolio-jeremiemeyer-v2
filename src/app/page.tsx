@@ -1,12 +1,13 @@
 import { siteConfig } from "@/../config/site"
 import Hero from "@/components/pages/home/hero"
 // import Projects from "@/components/pages/home/old.projects"
-import './main.css'
-import './globals.css'
+import "./main.css"
+import "./globals.css"
 import AboutMe from "@/components/pages/home/about-me"
 import Skills from "@/components/pages/home/skills"
 import Projects from "@/components/pages/home/projects"
 import Contact from "@/components/pages/home/contact"
+import { Viewport } from "next/dist/lib/metadata/types/metadata-interface"
 
 export const metadata = {
   title: {
@@ -31,10 +32,7 @@ export const metadata = {
     },
   ],
   creator: siteConfig.author,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
+
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -47,12 +45,19 @@ export const metadata = {
   //   card: "summary_large_image",
   //   title: siteConfig.name,
   //   description: siteConfig.description,
-  //   images: [`${siteConfig.url}/og.jpg`],
-  //   creator: "@_rdev7",
+  //   images: [`${siteConfig.url}/xxx.jpg`],
+  //   creator: "@",
   // },
   icons: {
     icon: "/favicon.ico",
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 }
 
 export default function Home() {
@@ -65,25 +70,6 @@ export default function Home() {
           <Skills />
           <Projects />
           <Contact />
-          {/* <section className="py-16 px-8 md:px-0 lg:py-32 space-y-4">
-          <HeadingText
-            title="GitHub Repo"
-          />
-            <div className="flex flex-col items-end gap-4">
-              <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                <Suspense fallback={<ProjectsSkeleton />}>
-                  <Projects />
-                </Suspense>
-              </div>
-              <a
-                target="_blank"
-                href={`${siteConfig.links.github}?tab=repositories`}
-                className="text-sm underline"
-              >
-                Tout parcourir...
-              </a>
-            </div>
-          </section> */}
         </main>
       </div>
     </>

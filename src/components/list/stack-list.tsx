@@ -1,5 +1,6 @@
 import { Stack, StackInfo } from "../../config/stack"
 import React, { useCallback } from "react"
+import { Badge } from "../ui/badge"
 
 interface StackListProps {
   stack: Stack[]
@@ -35,18 +36,20 @@ function StackList(props: StackListProps): React.ReactElement {
       : "transparent"
 
     return (
-      <span
-        className="mr-2 mb-2 rounded-sm px-2 py-1 text-xs font-medium text-white"
+      <Badge
+        className="text-white"
+        variant="default"
         style={{ background: backgroundColor }}
         key={stack}
       >
         {value}
-      </span>
+      </Badge>
+
     )
   }, [])
 
   return (
-    <div className="mb-2 flex flex-wrap">
+    <div className="mb-2 flex flex-wrap gap-2">
       {React.Children.toArray(stack.map(renderList))}
     </div>
   )

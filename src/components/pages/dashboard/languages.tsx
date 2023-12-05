@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from "recharts"
-import { Languages } from "@/types"
+import { Languages } from "@/types/api"
 
 
 interface LanguagesProps {

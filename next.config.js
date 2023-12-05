@@ -1,20 +1,20 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {    images: {
-    domains: ['firebasestorage.googleapis.com'],
-  },
-}
+const withMDX = require("@next/mdx")()
 
-// const nextConfig = {  images: {
-//     formats: ['image/avif', 'image/webp'],
-//     remotePatterns: [
-//       {
-//         protocol: 'https',
-//         hostname: 'assets.vercel.com',
-//         port: '',
-//         pathname: '/image/upload/**',
-//       },
-//     ],
-//   },
-// }
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "firebasestorage.googleapis.com",
+      },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+      },
+    ],
+  },
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+}
 
 module.exports = nextConfig
