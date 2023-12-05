@@ -8,7 +8,6 @@ import { getRepo } from "@/lib/api/github"
 import GitHubRepo from "@/components/pages/dashboard/github-repo"
 import { siteConfig } from "@/../config/site"
 import { Repo } from "@/types/api"
-import CodeTimeSkeleton from "@/components/loaders/codetime-skeleton"
 
 export const metadata = {
   title: "Dashboard | Jeremie Meyer",

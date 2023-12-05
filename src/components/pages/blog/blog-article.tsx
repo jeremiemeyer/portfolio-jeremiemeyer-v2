@@ -111,7 +111,6 @@ export default function BlogArticle({ title, pubDate, content, tags }) {
           {/* Contenu de l'article */}
           <div>
             <article className="prose dark:prose-invert pb-[150px]">
-              <button onClick={() => console.log(readingTimeInMinutes)}>zeizeu</button>
               {groupedContent.map((section, index) => (
                 <div key={index} id={section.id}>
                   {section.content}
