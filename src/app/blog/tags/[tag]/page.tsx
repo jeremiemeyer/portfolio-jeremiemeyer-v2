@@ -45,9 +45,16 @@ export default async function TagPostList({ params: { tag } }: Props) {
         </div>
         <div className="flex-col w-full">
           <p className="mt-10 mb-4">Aucun article avec ce mot-clé.</p>
-          <Link href="/blog">
-            <p className="hover:underline flex flex-row items-center">
-              <MdArrowBackIos className="mr-2" />
+
+          <Link
+            href="/blog"
+            className="group hover:underline text-zinc-500"
+          >
+            <p className="group hover:text-blue-600 hover:underline flex flex-row items-center">
+              <span className="inline-block transition-transform group-hover:-translate-x-1 group- motion-reduce:transform-none">
+                <MdArrowBackIos className="mr-2" />
+              </span>
+
               {`voir tous les articles`}
             </p>
           </Link>
@@ -68,9 +75,15 @@ export default async function TagPostList({ params: { tag } }: Props) {
             tag <span className="bg-blue-600 text-white px-1">#{tag}</span>
           </H2>
 
-          <Link href="/blog">
-            <p className="hover:underline flex flex-row items-center">
-              <MdArrowBackIos className="mr-2" />
+          <Link
+            href="/blog"
+            className="group hover:underline text-zinc-500"
+          >
+            <p className="group hover:text-blue-600 hover:underline flex flex-row items-center">
+              <span className="inline-block transition-transform group-hover:-translate-x-1 group- motion-reduce:transform-none">
+                <MdArrowBackIos className="mr-2" />
+              </span>
+
               {`voir tous les articles`}
             </p>
           </Link>

@@ -5,6 +5,7 @@ import { Meta } from "@/types"
 import { Badge } from "@/components/ui/badge"
 import { FaHashtag } from "react-icons/fa6"
 import getFormattedDate from "@/lib/utils"
+import { FaArrowRightLong } from "react-icons/fa6"
 
 type Props = {
   post: Meta
@@ -17,9 +18,6 @@ export default function BlogPostCard({ post, highlightTag }: Props) {
   return (
     <div
       className="w-full p-5 lg:p-6 rounded-3xl bg-gray-300 hover:bg-gray-400 hover:bg-opacity-20 bg-opacity-20 dark:bg-gray-700 dark:bg-opacity-20 dark:hover:bg-gray-600 dark:hover:bg-opacity-20 border border-gray-400 border-opacity-20 dark:border-slate-700 dark:border-opacity-30 mx-auto hover:text-blue-600"
-      // style={{
-      //   backgroundImage: `linear-gradient(to right, black, rgba(0, 0, 0, 0)), url("${banner}")`,
-      // }}
     >
       <div className="flex-col ml-0 p-2 md:p-0 hover:text-blue-600">
         <p className="text-zinc-700 dark:text-zinc-300 pb-2 hover:text-zinc-700 dark:hover:text-zinc-300">
@@ -60,9 +58,14 @@ export default function BlogPostCard({ post, highlightTag }: Props) {
             ))}
           </span>
         </div>
-        <Link href={`/blog/posts/${id}`}>
-          <span className="pt-2 font-semibold">Lire l'article</span>
-        </Link>
+
+        <Link href={`/blog/posts/${id}`} className="flex font-semibold items-center group">
+              {" "}
+              Lire l'article{" "}
+              <span className="inline-block transition-transform group-hover:translate-x-1 group-hover:text-blue-600 motion-reduce:transform-none">
+                <FaArrowRightLong />
+              </span>
+            </Link>
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ import StackList from "@/components/list/stack-list"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { unbounded } from "@/app/fonts"
+import { FaArrowRightLong } from "react-icons/fa6"
 
 export default function ProjectCard({
   title,
@@ -40,10 +41,20 @@ export default function ProjectCard({
           </h1>
           <p className="mt-4 mb-8 text-zinc-300">{description}</p>
           <StackList stack={stack} />
-          <br/> 
-          <Link href={href}>
-            <Button variant="outline">En savoir plus</Button>
-          </Link>
+          <br />
+
+          <Button
+            variant="outlineCustom"
+            className="group flex items-center hover:text-blue-600 hover:border-blue-600"
+          >
+            <Link href={href} className="flex items-center">
+              {" "}
+              En savoir plus{" "}
+              <span className="inline-block transition-transform group-hover:translate-x-1 group-hover:text-blue-600 motion-reduce:transform-none">
+                <FaArrowRightLong />
+              </span>
+            </Link>
+          </Button>
         </div>
       </div>
     </div>

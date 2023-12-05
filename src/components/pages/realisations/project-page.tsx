@@ -82,8 +82,11 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       href="/realisations"
                       className="hover:underline text-zinc-500 text-[0.8em]"
                     >
-                      <p className="hover:underline flex flex-row items-center">
-                        <MdArrowBackIos className="mr-2" />
+                      <p className="group hover:text-blue-600 hover:underline flex flex-row items-center">
+                        <span className="inline-block transition-transform group-hover:-translate-x-1 group- motion-reduce:transform-none">
+                          <MdArrowBackIos className="mr-2" />
+                        </span>
+
                         {`voir tous les projets`}
                       </p>
                     </Link>

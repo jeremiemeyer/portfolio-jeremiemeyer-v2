@@ -1,15 +1,11 @@
 //@ts-nocheck
 "use client"
 import Link from "next/link"
-import config from "../../../config"
+import config from "@/config"
 import React from "react"
 import { unbounded } from "@/app/fonts"
-import { BlogPost } from "@/config/blogposts"
-import HeadingText from "@/components/common/heading-text"
-import { Link as ReactScrollLink, Element } from "react-scroll"
+import { Link as ReactScrollLink } from "react-scroll"
 import { readingTime, extractTextContent } from "@/lib/utils"
-import { log } from "console"
-import { Badge } from "@/components/ui/badge"
 import { FaHashtag } from "react-icons/fa6"
 import { MdArrowBackIos } from "react-icons/md"
 
@@ -86,9 +82,15 @@ export default function BlogArticle({ title, pubDate, content, tags }) {
               <span className="text-xl font-light text-zinc-300">
                 <Link
                   href="/blog"
-                  className="hover:underline text-zinc-500 text-[0.8em]"
+                  className="group hover:underline text-zinc-500 text-[0.8em]"
                 >
-                  <p className="hover:underline flex flex-row items-center"><MdArrowBackIos className="mr-2" />{`voir tous les articles`}</p>
+                  <p className="group hover:text-blue-600 hover:underline flex flex-row items-center">
+                    <span className="inline-block transition-transform group-hover:-translate-x-1 group- motion-reduce:transform-none">
+                      <MdArrowBackIos className="mr-2" />
+                    </span>
+
+                    {`voir tous les articles`}
+                  </p>
                 </Link>
               </span>
               <br />
@@ -100,7 +102,8 @@ export default function BlogArticle({ title, pubDate, content, tags }) {
               <span
                 className={` text-zinc-600 dark:text-zinc-400 text-base font-normal flex flex-col md:flex-row`}
               >
-                <span className="font-semibold">{pubDate}</span><span className="hidden md:block">{" / "}</span>
+                <span className="font-semibold">{pubDate}</span>
+                <span className="hidden md:block">{" / "}</span>
                 <span>Temps de lecture : {readingTimeInMinutes} min</span>
               </span>
             </div>
@@ -110,7 +113,7 @@ export default function BlogArticle({ title, pubDate, content, tags }) {
         <div className="mt-[130px] container justify-between flex flex-row">
           {/* Contenu de l'article */}
           <div>
-            <article className="prose dark:prose-invert pb-[150px]">
+            <article className="prose dark:prose-invert pb-[170px]">
               {groupedContent.map((section, index) => (
                 <div key={index} id={section.id}>
                   {section.content}
