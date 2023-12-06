@@ -33,6 +33,7 @@ export default function Navbar() {
 
   const handleClick = async () => {
     setNavbar(false)
+    goTop()
   }
 
   useEffect(() => {
@@ -42,6 +43,12 @@ export default function Navbar() {
       document.body.style.overflow = "auto"
     }
   }, [navbar])
+
+  const goTop = () => {
+    window.scrollTo({
+      top: 0,
+    })
+  }
 
   return (
     <nav className="bg-blur bg-gray-100 dark:bg-gray-800 bg-opacity-70 dark:bg-opacity-50 border border-gray-400 border-opacity-20 dark:border-slate-700 dark:border-opacity-30 rounded-full mt-3 select-none sticky top-0 z-50 w-full max-w-[1000px] mx-auto">
