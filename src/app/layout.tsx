@@ -21,7 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html lang="fr">
         <body
-          className={`${worksans.className} flex flex-col min-h-screen bg-background text-zinc-800 dark:text-zinc-200`}
+          className={`${worksans.className} flex flex-col min-h-screen bg-background dark:bg-gray-950 text-zinc-800 dark:text-zinc-200`}
         >
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <Navbar />

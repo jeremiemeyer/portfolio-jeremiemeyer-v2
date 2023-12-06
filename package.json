@@ -29,6 +29,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/mdx": "^2.0.10",
     "@types/node": "20.3.2",
+    "@wojtekmaj/react-hooks": "^1.18.1",
     "autoprefixer": "10.4.14",
     "class-variance-authority": "^0.6.1",
     "clsx": "^1.2.1",
@@ -54,6 +55,7 @@
     "react-hook-form": "^7.45.1",
     "react-icons": "^4.12.0",
     "react-indiana-drag-scroll": "^2.1.0",
+    "react-pdf": "^7.5.1",
     "react-scroll": "^1.9.0",
     "recharts": "^2.10.1",
     "rehype-autolink-headings": "^7.1.0",
@@ -64,6 +66,7 @@
     "tailwind-merge": "^1.13.2",
     "tailwindcss": "3.3.2",
     "tailwindcss-animate": "^1.0.6",
+    "webpack": "^5.89.0",
     "wretch": "^2.6.0",
     "zod": "^3.21.4"
   },
@@ -71,6 +74,12 @@
     "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.42",
     "@types/react-dom": "^18.2.17",
-    "typescript": "^5.2.2"
+    "assert": "^2.1.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "typescript": "^5.2.2",
+    "util": "^0.12.5"
   }
 }

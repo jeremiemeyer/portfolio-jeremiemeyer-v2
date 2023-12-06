@@ -110,10 +110,10 @@ export default function BlogArticle({ title, pubDate, content, tags }) {
           </div>
         </div>
 
-        <div className="mt-[130px] container justify-between flex flex-row">
+        <div className="mt-[100px] container justify-between flex flex-row">
           {/* Contenu de l'article */}
           <div>
-            <article className="prose dark:prose-invert pb-[170px]">
+            <article className="prose dark:prose-invert pb-[220px]">
               {groupedContent.map((section, index) => (
                 <div key={index} id={section.id}>
                   {section.content}

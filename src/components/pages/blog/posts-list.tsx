@@ -1,5 +1,6 @@
 import { getPostsMeta } from "@/lib/posts"
 import BlogPostCard from "./blog-post-card"
+import FadeInOnEntry from "@/components/fade-in-on-entry"
 
 export default async function PostsList() {
   const posts = await getPostsMeta()
@@ -9,10 +10,12 @@ export default async function PostsList() {
   }
   return (
     <>
-      <div className="flex w-full">
+      <div className="flex flex-col w-full">
         <div className="mt-4 items-center grid gap-4 w-full pb-12">
           {posts.map((post) => (
-            <BlogPostCard key={post.id} post={post} />
+            <FadeInOnEntry>
+              <BlogPostCard key={post.id} post={post} />
+            </FadeInOnEntry>
           ))}
         </div>
       </div>

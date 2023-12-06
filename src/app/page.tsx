@@ -8,6 +8,7 @@ import Skills from "@/components/pages/home/skills"
 import Projects from "@/components/pages/home/projects"
 import Contact from "@/components/pages/home/contact"
 import { Viewport } from "next/dist/lib/metadata/types/metadata-interface"
+import FadeInOnEntry from "@/components/fade-in-on-entry"
 
 export const metadata = {
   title: {
@@ -61,15 +62,16 @@ export const viewport: Viewport = {
 }
 
 export default function Home() {
+  const components = [<AboutMe />, <Skills />, <Projects />, <Contact />]
+
   return (
     <>
       <div className="fade-in">
         <Hero />
         <main className="mb-12 container max-w-[1000px]">
-          <AboutMe />
-          <Skills />
-          <Projects />
-          <Contact />
+          {components.map((component, index) => (
+            <FadeInOnEntry key={index}>{component}</FadeInOnEntry>
+          ))}
         </main>
       </div>
     </>
