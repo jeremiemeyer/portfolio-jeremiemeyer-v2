@@ -32,9 +32,9 @@ export default async function Dashboard() {
 
   return (
     <main className="fade-in container py-4 sm:py-8 flex flex-col items-center w-full">
-      <section className="flex flex-col items-center space-y-2 text-center my-6 w-full">
+      <section className="items-center space-y-2 text-center my-6 w-full">
         <HeadingText title="Dashboard" subtext="Statistiques sur mon travail" />
-        <div className="flex flex-col gap-2 pt-4 w-full">
+        <div className="flex-col space-y-2 gap-2 pt-4 w-full">
           <CodeTime
             started={started}
             totalTime={totalTime}

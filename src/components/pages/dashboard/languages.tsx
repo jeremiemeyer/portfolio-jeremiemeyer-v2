@@ -1,13 +1,9 @@
-'use client'
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+"use client"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from "recharts"
 import { Languages } from "@/types/api"
-
+import SectionCard from "../home/section-card"
+import { H2 } from "@/components/form"
 
 interface LanguagesProps {
   languages: Languages[]
@@ -37,11 +33,9 @@ export default async function Languages({ languages }: LanguagesProps) {
 
   return (
     <>
-      <Card className="w-full border border-gray-400 border-opacity-20 dark:border-slate-700 dark:border-opacity-30">
-        <CardHeader>
-          <CardTitle className="text-lg">Langages utilisés</CardTitle>
-        </CardHeader>
-        <CardContent className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-0">
+      <SectionCard>
+        <H2>Langages utilisés</H2>
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-0">
           <ResponsiveContainer width="100%" height={250}>
             <PieChart>
               <Pie
@@ -87,8 +81,8 @@ export default async function Languages({ languages }: LanguagesProps) {
               ))}
             </div>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </SectionCard>
     </>
   )
 }

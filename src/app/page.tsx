@@ -68,7 +68,7 @@ export default function Home() {
     <>
       <div className="fade-in">
         <Hero />
-        <main className="mb-12 container max-w-[1000px]">
+        <main className="mb-12 container max-w-[1000px] grid gap-12">
           {components.map((component, index) => (
             <FadeInOnEntry key={index}>{component}</FadeInOnEntry>
           ))}

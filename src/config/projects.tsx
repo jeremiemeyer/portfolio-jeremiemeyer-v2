@@ -276,7 +276,7 @@ export const projects: Project[] = [
       </div>
     ),
 
-    shortDescription: "Une web app pour suivre sa progression en musculation.",
+    shortDescription: "Une web-app pour suivre sa progression en musculation.",
     repository: "",
     stack: [
       Stack.reactjs,

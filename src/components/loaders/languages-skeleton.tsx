@@ -1,5 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Skeleton } from "../ui/skeleton"
+import SectionCard from "@/components/pages/home/section-card"
+import { H2 } from "@/components/form"
 
 const dimensions = {
   height: 400,
@@ -9,11 +11,9 @@ const dimensions = {
 export default async function LanguagesSkeleton() {
   return (
     <>
-      <Card className="w-full border border-gray-400 border-opacity-20 dark:border-slate-700 dark:border-opacity-30">
-        <CardHeader>
-          <CardTitle className="text-lg">Langages utilisés</CardTitle>
-        </CardHeader>
-        <CardContent className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-0">
+      <SectionCard>
+        <H2>Langages utilisés</H2>
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-0">
           <Skeleton className="h-[250] mx-auto" />
           {/* <ResponsiveContainer width="100%" height={250}></ResponsiveContainer> */}
           <div className="flex items-center justify-center">
@@ -23,8 +23,8 @@ export default async function LanguagesSkeleton() {
               ))}
             </div>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </SectionCard>
     </>
   )
 }

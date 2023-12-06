@@ -1,10 +1,12 @@
 "use client"
 import { useState, useCallback } from "react"
 import { pdfjs, Document, Page } from "react-pdf"
-import { useResizeObserver } from "@wojtekmaj/react-hooks"
+import useResizeObserver from "use-resize-observer"
 import type { PDFDocumentProxy } from "pdfjs-dist"
 import "react-pdf/dist/Page/AnnotationLayer.css"
-import "react-pdf/dist/esm/Page/TextLayer.css";
+import "react-pdf/dist/esm/Page/TextLayer.css"
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
+import { Loader2 } from "lucide-react"
 
 type PDFFile = string | File | null
 
@@ -18,6 +20,10 @@ const options = {
   standardFontDataUrl: "/standard_fonts/",
 }
 
+export const Icons = {
+  spinner: Loader2,
+};
+
 const resizeObserverOptions = {}
 
 const maxWidth = 800
@@ -27,6 +33,7 @@ export default function Cv() {
   const [numPages, setNumPages] = useState<number>()
   const [containerRef, setContainerRef] = useState<HTMLElement | null>(null)
   const [containerWidth, setContainerWidth] = useState<number>()
+  const { ref, width = 1, height = 1 } = useResizeObserver<HTMLDivElement>()
 
   const onResize = useCallback<ResizeObserverCallback>((entries) => {
     const [entry] = entries
@@ -36,9 +43,6 @@ export default function Cv() {
     }
   }, [])
 
-  useResizeObserver(containerRef, resizeObserverOptions, onResize)
-
-
   function onDocumentLoadSuccess({
     numPages: nextNumPages,
   }: PDFDocumentProxy): void {
@@ -46,30 +50,22 @@ export default function Cv() {
   }
 
   return (
-    <div>
-      <div className="Example__container">
-        <div className="Example__container__document" ref={setContainerRef}>
-          <Document
-            file={file}
-            onLoadSuccess={onDocumentLoadSuccess}
-            options={options}
-            loading="Chargement du PDF..."
-          >
-            {numPages &&
-              Array.from({ length: numPages }, (_, index) => (
-                <Page
-                  key={`page_${index + 1}`}
-                  pageNumber={index + 1}
-                  width={
-                    containerWidth
-                      ? Math.min(containerWidth, maxWidth)
-                      : maxWidth
-                  }
-                />
-              ))}
-          </Document>
-        </div>
-      </div>
+    <div className="w-full md:p-8 lg:p-16 flex justify-center" ref={ref}>
+      <Document
+        file={file}
+        onLoadSuccess={onDocumentLoadSuccess}
+        options={options}
+        loading={<Icons.spinner className="h-12 w-12 animate-spin" />}
+      >
+        {[...Array(numPages)].map((_, index) => (
+          <Page
+            key={`page_${index + 1}`}
+            pageNumber={index + 1}
+            width={width || undefined}
+            loading={<Icons.spinner className="h-12 w-12 animate-spin" />}
+          />
+        ))}
+      </Document>
     </div>
   )
 }

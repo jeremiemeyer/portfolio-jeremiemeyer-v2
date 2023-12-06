@@ -5,7 +5,7 @@ import config from "@/config"
 export default function Projects() {
   return (
     <>
-      <section className="mt-8 flex flex-col">
+      <section className="flex flex-col mb-12">
           <div className="p-5 lg:p-8">
             <HeadingText title="Projets réalisés" />
           </div>

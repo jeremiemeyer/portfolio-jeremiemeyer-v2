@@ -1,12 +1,7 @@
-import {
-  Card,
-  CardDescription,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Languages } from "@/types/api"
 
+import { Languages } from "@/types/api"
+import SectionCard from "@/components/pages/home/section-card"
+import { H2, H3 } from "@/components/form"
 
 interface CodeTimeProps {
   started: string
@@ -14,16 +9,16 @@ interface CodeTimeProps {
   languages: Languages[]
 }
 
-export default async function CodeTime({ started, totalTime, languages }: CodeTimeProps) {
-
+export default async function CodeTime({
+  started,
+  totalTime,
+  languages,
+}: CodeTimeProps) {
   return (
-    <Card className="flex-grow h-full border border-gray-400 border-opacity-20 dark:border-slate-700 dark:border-opacity-30">
-      <CardHeader>
-        <CardTitle>Temps de codage</CardTitle>
-        <CardDescription>la semaine dernière</CardDescription>
-        {/* <CardDescription>{started}</CardDescription> */}
-      </CardHeader>
-      <CardContent className="text-xl font-medium">{totalTime}</CardContent>
-    </Card>
+    <SectionCard>
+      <H2>Temps de codage</H2>
+      <H3>La semaine dernière</H3>
+      <span className="text-xl">{totalTime}</span>
+    </SectionCard>
   )
 }
