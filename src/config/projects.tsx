@@ -322,7 +322,8 @@ export const projects: Project[] = [
         >
           Description
         </H2>
-        <p>Mon portfolio personnel, réalisé avec Next.js.</p>
+        <p>Mon portfolio personnel, réalisé avec Next.js.
+        </p>
         <br />
         <br />
         <H2
@@ -384,12 +385,8 @@ export const projects: Project[] = [
     repository: "",
     stack: [Stack.nextjs, Stack.reactjs, Stack.typescript, Stack.nodejs],
     dimensions: [360, 640],
-    screenshotsDesktop: [
-      "/static/projects/portfolio-jm/screenshots/desktop/screenshot01.jpg",
-    ],
-    screenshotsMobile: [
-      "/static/projects/portfolio-jm/screenshots/desktop/screenshot01.jpg",
-    ],
+    screenshotsDesktop: [],
+    screenshotsMobile: [],
     deployment: {
       web: "https://www.jeremiemeyer.fr",
     },
