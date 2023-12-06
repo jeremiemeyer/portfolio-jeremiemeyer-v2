@@ -7,7 +7,7 @@ export default function CodeTimeSkeleton() {
     <SectionCard>
       <H2>Temps de codage</H2>
       <H3>La semaine dernière</H3>
-      <Skeleton className="text-xl" />
+      <Skeleton className="text-xl h-6 w-[12rem] flex mx-auto" />
     </SectionCard>
   )
 }
