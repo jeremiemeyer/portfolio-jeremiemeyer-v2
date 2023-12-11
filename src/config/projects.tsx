@@ -3,6 +3,7 @@ import { Maybe, Tuple } from "../types"
 import { Stack } from "./stack"
 import React from "react"
 import { H1, H2, H3 } from "@/components/form"
+import Video from "@/components/pages/blog/video"
 
 export type Deployment = {
   web?: string
@@ -322,8 +323,7 @@ export const projects: Project[] = [
         >
           Description
         </H2>
-        <p>Mon portfolio personnel, réalisé avec Next.js.
-        </p>
+        <p>Mon portfolio personnel, réalisé avec Next.js.</p>
         <br />
         <br />
         <H2
@@ -400,6 +400,24 @@ export const projects: Project[] = [
     website: "https://www.denat-environnement.fr",
     description: (
       <div>
+        <div className="pb-12">
+          <H2
+            className="text-black dark:text-white"
+            style={{
+              fontSize: "20px",
+              fontWeight: "600",
+              marginBottom: "12px",
+            }}
+          >
+            Vidéo de présentation
+          </H2>
+          <p className="pb-2 italic">
+            Mise à jour à venir du site : une refonte à l'aide de Next.js !
+            Présentation en vidéo.
+          </p>
+          <Video id={"7sYjFOM8Vvw"} />
+        </div>
+
         <H2
           style={{ fontSize: "20px", fontWeight: "600", marginBottom: "12px" }}
         >

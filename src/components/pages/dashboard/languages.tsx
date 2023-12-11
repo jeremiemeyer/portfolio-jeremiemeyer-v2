@@ -1,8 +1,7 @@
 "use client"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from "recharts"
 import { Languages } from "@/types/api"
-import SectionCard from "../home/section-card"
+import SectionCard from "@/components/pages/home/section-card"
 import { H2 } from "@/components/form"
 
 interface LanguagesProps {
