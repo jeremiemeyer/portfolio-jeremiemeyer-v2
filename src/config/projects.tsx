@@ -46,6 +46,19 @@ export const projects: Project[] = [
     website: "https://buffroo.vercel.app",
     description: (
       <div>
+        <div className="pb-12">
+          <H2
+            className="text-black dark:text-white"
+            style={{
+              fontSize: "20px",
+              fontWeight: "600",
+              marginBottom: "12px",
+            }}
+          >
+            Vidéo de présentation
+          </H2>
+          <Video id={"a0kHGjz2oIQ"} />
+        </div>
         <H2
           className="text-black dark:text-white dark:text-white"
           style={{ fontSize: "20px", fontWeight: "600", marginBottom: "12px" }}
