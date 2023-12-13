@@ -31,7 +31,7 @@ export default async function Dashboard() {
   const repoData = (await getRepo()) as Repo[]
 
   return (
-    <main className="container py-4 sm:py-8 flex flex-col items-center w-full">
+    <main className="fade-in container py-4 sm:py-8 flex flex-col items-center w-full">
       <section className="items-center space-y-2 text-center my-6 w-full">
         <HeadingText title="Dashboard" subtext="Statistiques sur mon travail" />
         <div className="flex-col space-y-2 gap-2 pt-4 w-full">
