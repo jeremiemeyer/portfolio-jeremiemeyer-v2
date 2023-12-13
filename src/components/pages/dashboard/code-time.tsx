@@ -17,7 +17,7 @@ export default async function CodeTime({
   return (
     <SectionCard>
       <H2>Temps de codage</H2>
-      <H3>La semaine dernière</H3>
+      <H3>7 derniers jours</H3>
       <span className="text-xl">{totalTime}</span>
     </SectionCard>
   )

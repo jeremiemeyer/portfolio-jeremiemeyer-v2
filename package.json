@@ -53,6 +53,7 @@
     "nodemailer": "^6.9.4",
     "postcss": "8.4.24",
     "react": "^18.2.0",
+    "react-calendly": "^4.3.0",
     "react-circle-progress-bar": "^0.1.4",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.1",
