@@ -112,14 +112,12 @@ export default function BlogArticle({ title, pubDate, content, tags }) {
 
         <div className="mt-[100px] container justify-between flex flex-row">
           {/* Contenu de l'article */}
-          <div>
-            <article className="prose dark:prose-invert pb-[220px]">
-              {groupedContent.map((section, index) => (
-                <div key={index} id={section.id}>
-                  {section.content}
-                </div>
-              ))}
-            </article>
+          <article className="w-full md:w-3/4 prose dark:prose-invert pb-[220px]">
+            {groupedContent.map((section, index) => (
+              <div key={index} id={section.id}>
+                {section.content}
+              </div>
+            ))}
             <div className="pb-8">
               Articles similaires :{" "}
               <div className="space-x-2 flex flex-row">
@@ -136,11 +134,11 @@ export default function BlogArticle({ title, pubDate, content, tags }) {
                 ))}
               </div>
             </div>
-          </div>
+          </article>
 
           {/* Table des matières */}
           {tableOfContents.length > 1 && (
-            <aside className="hidden md:block w-1/4">
+            <aside className="hidden md:block w-1/4 p-4">
               <nav
                 className={`${unbounded.className} sticky top-40 flex flex-col`}
               >
