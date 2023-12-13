@@ -53,6 +53,7 @@ export default async function Post({ params: { postId } }: Props) {
       pubDate={pubDate}
       content={content}
       tags={meta.tags}
+      postId={postId}
     />
   )
 }

@@ -8,10 +8,12 @@ import { Link as ReactScrollLink } from "react-scroll"
 import { readingTime, extractTextContent } from "@/lib/utils"
 import { FaHashtag } from "react-icons/fa6"
 import { MdArrowBackIos } from "react-icons/md"
+import { GoClock } from "react-icons/go"
+import ShareIcons from "./share-icons"
 
 const { blogposts } = config
 
-export default function BlogArticle({ title, pubDate, content, tags }) {
+export default function BlogArticle({ title, pubDate, content, tags, postId }) {
   const textContent = extractTextContent(content)
   const readingTimeInMinutes = readingTime(textContent)
 
@@ -102,9 +104,16 @@ export default function BlogArticle({ title, pubDate, content, tags }) {
               <span
                 className={` text-zinc-600 dark:text-zinc-400 text-base font-normal flex flex-col md:flex-row`}
               >
-                <span className="font-semibold">{pubDate}</span>
-                <span className="hidden md:block">{" / "}</span>
-                <span>Temps de lecture : {readingTimeInMinutes} min</span>
+                <span className="font-semibold md:pr-4 md:border-r border-zinc-100/40 pl-0 pr-0 border-0">
+                  {pubDate}
+                </span>
+                <span className="flex flex-row items-center gap-2 md:pl-4 md:pr-4 md:border-r border-zinc-100/40 pl-0 pr-0 border-0">
+                  <GoClock /> {readingTimeInMinutes} min
+                </span>
+                <span className="flex flex-row gap-3 md:pl-4 md:pr-4 pl-0 pr-0">
+                  Partager cet article :{" "}
+                  <ShareIcons pathToShare={`/blog/posts/${postId}`} />
+                </span>
               </span>
             </div>
           </div>
