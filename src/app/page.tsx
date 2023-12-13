@@ -73,6 +73,7 @@ export default function Home() {
             <FadeInOnEntry key={index}>{component}</FadeInOnEntry>
           ))}
         </main>
+        <div id="__next" />
       </div>
     </>
   )
