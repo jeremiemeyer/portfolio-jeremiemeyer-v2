@@ -336,7 +336,44 @@ export const projects: Project[] = [
         >
           Description
         </H2>
-        <p>Mon portfolio personnel, réalisé avec Next.js.</p>
+        <p>Mon portfolio personnel, réalisé avec Next.js/TypeScript (T3 Stack).</p>
+        <br />
+        <br />
+        <H2
+          className="text-black dark:text-white"
+          style={{ fontSize: "20px", fontWeight: "600", marginBottom: "12px" }}
+        >
+          Fonctionnalités
+        </H2>
+        <ul style={{ fontSize: "16px" }}>
+          <li
+            style={{
+              listStyleType: "circle",
+              marginLeft: "20px",
+              marginBottom: "2px",
+            }}
+          >
+            Blog avec pages ISR générées périodiquement sur base de repository de fichiers MDX
+          </li>
+          <li
+            style={{
+              listStyleType: "circle",
+              marginLeft: "20px",
+              marginBottom: "2px",
+            }}
+          >
+            Formulaire de contact nodemailer
+          </li>
+          <li
+            style={{
+              listStyleType: "circle",
+              marginLeft: "20px",
+              marginBottom: "2px",
+            }}
+          >
+            Utilisation d'APIs pour récupérer les stats GitHub et VSCode
+          </li>
+        </ul>
         <br />
         <br />
         <H2
@@ -364,6 +401,17 @@ export const projects: Project[] = [
               marginBottom: "2px",
             }}
           >
+            <a href="https://lucide.dev/" target="_blank">
+              lucide
+            </a>
+          </li>
+          <li
+            style={{
+              listStyleType: "circle",
+              marginLeft: "20px",
+              marginBottom: "2px",
+            }}
+          >
             <a href="https://recharts.org/en-US/" target="_blank">
               recharts (graphiques)
             </a>
@@ -377,6 +425,17 @@ export const projects: Project[] = [
           >
             <a href="https://nodemailer.com/" target="_blank">
               nodemailer (envoi de mails avec le formulaire)
+            </a>
+          </li>
+          <li
+            style={{
+              listStyleType: "circle",
+              marginLeft: "20px",
+              marginBottom: "2px",
+            }}
+          >
+            <a href="https://www.npmjs.com/package/next-mdx-remote" target="_blank">
+              next-mdx-remote
             </a>
           </li>
           <li
