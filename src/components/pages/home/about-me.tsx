@@ -14,8 +14,9 @@ export default function AboutMe() {
       <div className="flex flex-col-reverse lg:flex-row items-center">
         <div>
           <p className="lg:text-lg text-zinc-500 dark:text-zinc-400 mb-6">
-            Hello ! 👋 Je suis un développeur front-end freelance spécialisé
-            dans la création de sites internet et de web-apps.
+            Hello ! 👋 Je suis un développeur front-end freelance basé à
+            Strasbourg, spécialisé dans la création de sites internet et de
+            web-apps.
             <br /> <br />
             Mon domaine d'intervention :
             <ul className="px-8">

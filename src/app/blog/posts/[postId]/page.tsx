@@ -34,6 +34,7 @@ export async function generateMetadata({ params: { postId } }: Props) {
 
   return {
     title: `${post.meta.title} | Jeremie Meyer`,
+    description: post.meta.summary,
   }
 }
 
@@ -45,7 +46,6 @@ export default async function Post({ params: { postId } }: Props) {
   const { meta, content } = post
 
   const pubDate = getFormattedDate(meta.date)
-
 
   return (
     <BlogArticle

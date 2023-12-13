@@ -6,6 +6,7 @@ export const revalidate = 86400
 
 export const metadata = {
   title: "Blog | Jeremie Meyer",
+  description: "Mes articles conception et développement web, SEO, bonnes pratiques, découvertes etc."
 }
 
 export default async function page() {
