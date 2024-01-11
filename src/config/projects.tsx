@@ -302,11 +302,13 @@ export const projects: Project[] = [
     ],
     dimensions: [360, 640],
     screenshotsDesktop: [
-      "/static/projects/buffroo/screenshots/desktop/000.jpg",
       "/static/projects/buffroo/screenshots/desktop/001.jpg",
       "/static/projects/buffroo/screenshots/desktop/002.jpg",
       "/static/projects/buffroo/screenshots/desktop/003.jpg",
       "/static/projects/buffroo/screenshots/desktop/004.jpg",
+      "/static/projects/buffroo/screenshots/desktop/005.jpg",
+      "/static/projects/buffroo/screenshots/desktop/006.jpg",
+      "/static/projects/buffroo/screenshots/desktop/007.jpg",
     ],
     screenshotsMobile: [
       "/static/projects/buffroo/screenshots/mobile/001.jpg",
@@ -315,7 +317,6 @@ export const projects: Project[] = [
       "/static/projects/buffroo/screenshots/mobile/004.jpg",
       "/static/projects/buffroo/screenshots/mobile/005.jpg",
       "/static/projects/buffroo/screenshots/mobile/006.jpg",
-      "/static/projects/buffroo/screenshots/mobile/007.jpg",
     ],
     deployment: {
       web: "https://buffroo.vercel.app/",
