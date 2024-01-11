@@ -291,7 +291,7 @@ export const projects: Project[] = [
     ),
 
     shortDescription: "Une web-app pour suivre sa progression en musculation.",
-    repository: "",
+    repository: "https://github.com/jeremiemeyer/buffroo",
     stack: [
       Stack.reactjs,
       Stack.typescript,
@@ -455,7 +455,7 @@ export const projects: Project[] = [
     ),
 
     shortDescription: "Mon portfolio personnel.",
-    repository: "",
+    repository: "https://github.com/jeremiemeyer/portfolio-jeremiemeyer-v2",
     stack: [Stack.nextjs, Stack.reactjs, Stack.typescript, Stack.nodejs],
     dimensions: [360, 640],
     screenshotsDesktop: [],

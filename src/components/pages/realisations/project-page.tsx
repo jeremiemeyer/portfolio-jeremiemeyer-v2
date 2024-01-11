@@ -18,6 +18,7 @@ import "swiper/css/pagination"
 import { Zoom, Navigation, Pagination } from "swiper/modules"
 import { unbounded } from "@/app/fonts"
 import { MdArrowBackIos } from "react-icons/md"
+import { AiOutlineLink } from "react-icons/ai"
 
 const { projects } = config
 
@@ -32,7 +33,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   const {
     title,
     description,
-    shortDescription,
+    repository,
     projectType,
     banner,
     dimensions,
@@ -64,6 +65,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   )
 
   const hasDeployments = !!deployment
+  const hasRepository = !!repository
   const hasDesktopScreenshots = !!screenshotsDesktop.length
   const hasMobileScreenshots = !!screenshotsMobile.length
   const hasSubProjects = !!subProjects.length
@@ -103,9 +105,22 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     className={`${unbounded.className} dark:text-zinc-300 text-4xl md:text-6xl font-semibold flex break-words flex-col md:flex-row md:justify-between items-baseline`}
                   >
                     {title}
-                    <div className="pt-2 md:pt-0">
+                    <div className="pt-2 md:pt-0 flex flex-row">
                       <Conditional condition={hasDeployments}>
                         <DeploymentList deployment={deployment} />
+                      </Conditional>
+
+                      <Conditional condition={hasRepository}>
+                        <a
+                          className="mr-2 flex items-center px-2 py-1 text-xs font-medium text-white bg-green-800 hover:bg-green-700 rounded-xl h-8"
+                          href={repository}
+                          // style={{ background }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <AiOutlineLink className="mr-1" size={15} />
+                          code
+                        </a>
                       </Conditional>
                     </div>
                   </span>
